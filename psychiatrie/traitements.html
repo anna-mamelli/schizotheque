@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ressources sur les traitements médicamenteux en psychiatrie : antipsychotiques, psychotropes, innovation thérapeutique">
+    <title>Traitements médicaux | Psychiatrie | Schizothèque</title>
+
+    <link rel="icon" href="../data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="has-floating-nav">
+
+    <!-- Navigation flottante -->
+    <nav class="floating-nav" id="floatingNav">
+        <div class="nav-header">
+            <a href="../index.html" class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <span>Schizothèque</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <div class="nav-menu" id="navMenu">
+            <a href="../index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Accueil</span>
+            </a>
+            <a href="../mdph-aah/index.html" class="nav-item">
+                <i class="fas fa-file-contract"></i>
+                <span>MDPH - AAH</span>
+            </a>
+            <a href="../culture/index.html" class="nav-item">
+                <i class="fas fa-palette"></i>
+                <span>Culture</span>
+            </a>
+            <a href="../associations/index.html" class="nav-item">
+                <i class="fas fa-users"></i>
+                <span>Associations</span>
+            </a>
+            <a href="../temoignages/index.html" class="nav-item">
+                <i class="fas fa-heart"></i>
+                <span>Témoignages</span>
+            </a>
+            <a href="../luttes-handies/index.html" class="nav-item">
+                <i class="fas fa-fist-raised"></i>
+                <span>Luttes handies</span>
+            </a>
+            <a href="../maladies/index.html" class="nav-item">
+                <i class="fas fa-notes-medical"></i>
+                <span>Maladies & Symptômes</span>
+            </a>
+            <a href="../pair-aidance/index.html" class="nav-item">
+                <i class="fas fa-hands-helping"></i>
+                <span>Pair-aidance</span>
+            </a>
+            <a href="../etudes-recherches/index.html" class="nav-item">
+                <i class="fas fa-flask"></i>
+                <span>Études & Recherches</span>
+            </a>
+            <a href="../mad-studies/index.html" class="nav-item">
+                <i class="fas fa-book-open"></i>
+                <span>Mad Studies</span>
+            </a>
+            <a href="./index.html" class="nav-item active">
+                <i class="fas fa-hospital"></i>
+                <span>Psychiatrie</span>
+            </a>
+        </div>
+
+        <div class="nav-footer">
+            <button id="darkModeToggle" class="dark-mode-btn" aria-label="Mode sombre">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main class="main-wrapper">
+
+        <!-- Header de sous-catégorie -->
+        <header class="category-hero" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+            <div class="container">
+                <a href="./index.html" class="breadcrumb">
+                    <i class="fas fa-arrow-left"></i> Retour à Psychiatrie
+                </a>
+                <div class="category-hero-content">
+                    <div class="category-hero-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <div>
+                        <h1 class="category-hero-title">Traitements médicamenteux</h1>
+                        <p class="category-hero-desc">Antipsychotiques, psychotropes et innovations thérapeutiques</p>
+                        <span class="category-hero-count"><i class="fas fa-link"></i> 7 ressources</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Barre de recherche -->
+        <section class="search-section">
+            <div class="container">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" id="localSearch" placeholder="Rechercher dans cette catégorie...">
+                    <button class="clear-search" id="clearSearch" style="display: none;">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <p class="results-info" id="resultsInfo"></p>
+            </div>
+        </section>
+
+        <!-- Grille de ressources -->
+        <section class="resources-section container">
+            <div class="resources-grid" id="resourcesList">
+
+                <!-- Ressource 1 : HAS ALD -->
+                <a href="https://www.has-sante.fr/jcms/c_565630/fr/ald-n-23-schizophrenies" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-file-medical"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">ALD N° 23 - Schizophrénies | HAS</h3>
+                        <p class="resource-description">Guide des affections de longue durée pour la schizophrénie</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- Ressource 2 : Médicament prometteur USA -->
+                <a href="https://www.lasantepublique.fr/schizophrenie-un-medicament-prometteur-autorise-aux-etats-unis/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-capsules"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Schizophrénie : un médicament prometteur autorisé aux États-Unis</h3>
+                        <p class="resource-description">Nouveaux traitements approuvés par la FDA</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- Ressource 3 : KarXT Phase III -->
+                <a href="https://xtalks.com/karxt-a-new-hope-for-schizophrenia-patients-phase-iii-trial-data-reveals-3651/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">KarXT: A New Hope for Schizophrenia Patients (Phase III)</h3>
+                        <p class="resource-description">Essai clinique prometteur pour un nouveau traitement</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- Ressource 4 : Wikipedia Xanomeline -->
+                <a href="https://en.wikipedia.org/wiki/Xanomeline/trospium_chloride" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <i class="fas fa-prescription-bottle"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Xanomeline/trospium chloride | Wikipedia</h3>
+                        <p class="resource-description">Nouvelle molécule agoniste muscarinique</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- Ressource 5 : Antiépileptiques -->
+                <a href="https://www.santelog.com/actualites/epilepsie-les-antiepileptiques-fauteurs-aussi-de-troubles-psychotiques" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%);">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Les antiépileptiques fauteurs aussi de troubles psychotiques ?</h3>
+                        <p class="resource-description">Effets secondaires psychiatriques des anticonvulsivants</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- Ressource 6 : Wikipedia psychotropes -->
+                <a href="https://fr.wikipedia.org/wiki/M%C3%A9dicament_psychotrope" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Médicament psychotrope | Wikipédia</h3>
+                        <p class="resource-description">Définition et classification des psychotropes</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- Ressource 7 : Abilify marketing -->
+                <a href="https://www.fiercepharma.com/marketing/bristol-myers-to-pay-19-5-million-abilify-off-label-marketing-settlement" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Bristol-Myers : amende de 19,5M$ pour marketing d'Abilify hors AMM</h3>
+                        <p class="resource-description">Pratiques controversées de l'industrie pharmaceutique</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+            </div>
+
+            <!-- Message si aucun résultat -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>Aucun résultat trouvé</h3>
+                <p>Essayez avec d'autres mots-clés</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4><i class="fas fa-brain"></i> Schizothèque</h4>
+                        <p>Hub communautaire de ressources sur la schizophrénie</p>
+                        <p class="credits">
+                            Basé sur <a href="https://www.pearltrees.com/chabelitza/panorama-schizo/id86766449" target="_blank">Panorama Schizo</a>
+                        </p>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4><i class="fas fa-phone-alt"></i> Urgences</h4>
+                        <ul class="urgence-list">
+                            <li><strong>3114</strong> - Numéro national de prévention du suicide</li>
+                            <li><strong>15</strong> - SAMU</li>
+                            <li><strong>112</strong> - Urgences européennes</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4><i class="fas fa-hands-helping"></i> Contribuer</h4>
+                        <p>Ce projet est open source et communautaire.</p>
+                        <a href="https://anna-mamelli.github.com/schizotheque" class="btn-contribute" target="_blank">
+                            <i class="fab fa-github"></i> Contribuer sur GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>
+                        &copy; 2026 Schizothèque • 
+                        <a href="https://anna-mamelli.github.com/schizotheque" target="_blank">Open Source</a> • 
+                        Fait avec <i class="fas fa-heart"></i> pour la communauté
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Bouton retour en haut -->
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

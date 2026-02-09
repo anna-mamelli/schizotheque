@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Témoignages">
+    <title>Témoignages | Schizothèque</title>
+
+    <link rel="icon" href="../data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="has-floating-nav">
+
+    <!-- Navigation flottante -->
+    <nav class="floating-nav" id="floatingNav">
+        <div class="nav-header">
+            <a href="../index.html" class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <span>Schizothèque</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <div class="nav-menu" id="navMenu">
+            <a href="../index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Accueil</span>
+            </a>
+            <a href="../mdph-aah/index.html" class="nav-item">
+                <i class="fas fa-file-contract"></i>
+                <span>MDPH - AAH</span>
+            </a>
+            <a href="../culture/index.html" class="nav-item">
+                <i class="fas fa-palette"></i>
+                <span>Culture</span>
+            </a>
+            <a href="../associations/index.html" class="nav-item">
+                <i class="fas fa-users"></i>
+                <span>Associations</span>
+            </a>
+            <a href="../temoignages/index.html" class="nav-item active">
+                <i class="fas fa-heart"></i>
+                <span>Témoignages</span>
+            </a>
+            <a href="../luttes-handies/index.html" class="nav-item">
+                <i class="fas fa-fist-raised"></i>
+                <span>Luttes handies</span>
+            </a>
+            <a href="../maladies/index.html" class="nav-item">
+                <i class="fas fa-notes-medical"></i>
+                <span>Maladies & Symptômes</span>
+            </a>
+            <a href="../pair-aidance/index.html" class="nav-item">
+                <i class="fas fa-hands-helping"></i>
+                <span>Pair-aidance</span>
+            </a>
+            <a href="../etudes-recherches/index.html" class="nav-item">
+                <i class="fas fa-flask"></i>
+                <span>Études & Recherches</span>
+            </a>
+            <a href="../mad-studies/index.html" class="nav-item">
+                <i class="fas fa-book-open"></i>
+                <span>Mad Studies</span>
+            </a>
+            <a href="../psychiatrie/index.html" class="nav-item">
+                <i class="fas fa-hospital"></i>
+                <span>Psychiatrie</span>
+            </a>
+        </div>
+
+        <div class="nav-footer">
+            <button id="darkModeToggle" class="dark-mode-btn" aria-label="Mode sombre">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main class="main-wrapper">
+
+        <!-- Header de catégorie -->
+        <header class="category-hero" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+            <div class="container">
+                <a href="../index.html" class="breadcrumb">
+                    <i class="fas fa-arrow-left"></i> Retour à l'accueil
+                </a>
+                <div class="category-hero-content">
+                    <div class="category-hero-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div>
+                        <h1 class="category-hero-title">Témoignages</h1>
+                        <p class="category-hero-desc"></p>
+                        <span class="category-hero-count"><i class="fas fa-link"></i> 20 ressources</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Barre de recherche -->
+        <section class="search-section">
+            <div class="container">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" id="localSearch" placeholder="Rechercher dans cette catégorie...">
+                    <button class="clear-search" id="clearSearch" style="display: none;">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <p class="results-info" id="resultsInfo"></p>
+            </div>
+        </section>
+
+        <!-- Grille de ressources -->
+        <section class="resources-section container">
+            <div class="resources-grid" id="resourcesList">
+
+                <a href="https://www.brut.media/fr/videos/france/societe/david-a-41-ans-et-il-est-atteint-de-schizophrenie" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">David a 41 ans et il est atteint de schizophrénie</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                
+                <a href="https://youtu.be/hmA3rLGW-k4" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Témoignage de David Martinelli - YouTube</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                
+                <a href="https://actu.fr/societe/je-pensais-que-les-gens-voulaient-me-tuer-atteints-de-schizophrenie-ils-racontent-l-enfer-de-la-maladie_62405363.html" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">"Je pensais que les gens voulaient me tuer" : atteints de schizophrénie, ils…</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                
+                <a href="https://www.collectif-schizophrenies.com/les-temoignages/temoignage-de-gilles-laurent" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #f5576c 0%, #e63946 100%);">
+                        <i class="fas fa-phone-volume"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Témoignage d'Elise - Collectif Schizophrénies</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                
+                <a href="https://informations.handicap.fr/a-schizophrenie-temoignage-percutant-pour-briser-les-tabous-37849.php" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Schizophrénie : témoignage de Maximilien</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+               
+                <a href="https://youtu.be/Yg90lGSy5bQ" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Témoignage de Kévin</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                
+                <a href="https://youtu.be/MpA-XXWvmHw" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Folie blanche - Arte Podcast - Joris</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                
+                <a href="https://bottinnicolas.wixsite.com/nico/blog" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                        <i class="fas fa-first-aid"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Blog | Moryotis</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                
+                <a href="https://youtu.be/Vfj0LSFBoWc" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Perchés - Vivre plutôt que survivre</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+               
+                <a href="https://youtu.be/xbagFzcyNiM" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">I Am Not A Monster: Schizophrenia | Cecilia McGough | TEDxPSU</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                
+                <a href="https://youtu.be/f6CILJA110Y" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <i class="fas fa-file-medical"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Elyn Saks: A tale of mental illness -- from the inside</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                
+                <a href="https://youtu.be/ckGrw1rAdTg" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Schizophrénie et spiritualité</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                
+                <a href="https://youtu.be/OGJN-F6BZ8A" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Le quotidien des schizophrènes</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                
+                <a href="https://youtu.be/G6kWHEqheSA" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Dévi</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                
+                <a href="https://youtu.be/w_6GhUmS964" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Jason</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                
+                <a href="https://youtu.be/znZKFe6TRGc" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Naama Trottier</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+              
+                <a href="https://www.facebook.com/watch/?v=2954796758135969&rdid=jcEKmRAZDDOY1hR2" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-universal-access"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Droit Pluriel</h3>
+                        <p class="resource-description">Lucille et Gringe</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+               
+                <a href="https://blogschizo.wordpress.com/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">blogschizo | Blog sur la schizophrénie: journal de mes années de maladie, actualités,…</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                
+                </div>
+
+            <!-- Message si aucun résultat -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>Aucun résultat trouvé</h3>
+                <p>Essayez avec d'autres mots-clés</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4><i class="fas fa-brain"></i> Schizothèque</h4>
+                        <p>Hub communautaire de ressources sur la schizophrénie</p>
+                        <p class="credits">
+                            Basé sur <a href="https://www.pearltrees.com/chabelitza/panorama-schizo/id86766449" target="_blank">Panorama Schizo</a>
+                        </p>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4><i class="fas fa-phone-alt"></i> Urgences</h4>
+                        <ul class="urgence-list">
+                            <li><strong>3114</strong> - Numéro national de prévention du suicide</li>
+                            <li><strong>15</strong> - SAMU</li>
+                            <li><strong>112</strong> - Urgences européennes</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4><i class="fas fa-hands-helping"></i> Contribuer</h4>
+                        <p>Ce projet est open source et communautaire.</p>
+                        <a href="https://anna-mamelli.github.com/schizotheque" class="btn-contribute" target="_blank">
+                            <i class="fab fa-github"></i> Contribuer sur GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>
+                        &copy; 2026 Schizothèque • 
+                        <a href="https://anna-mamelli.github.com/schizotheque" target="_blank">Open Source</a> • 
+                        Fait avec <i class="fas fa-heart"></i> pour la communauté
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Bouton retour en haut -->
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

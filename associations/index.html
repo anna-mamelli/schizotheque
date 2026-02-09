@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Associations">
+    <title>Associations | Schizothèque</title>
+
+    <link rel="icon" href="../data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="has-floating-nav">
+
+    <!-- Navigation flottante -->
+    <nav class="floating-nav" id="floatingNav">
+        <div class="nav-header">
+            <a href="../index.html" class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <span>Schizothèque</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <div class="nav-menu" id="navMenu">
+            <a href="../index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Accueil</span>
+            </a>
+            <a href="../mdph-aah/index.html" class="nav-item">
+                <i class="fas fa-file-contract"></i>
+                <span>MDPH - AAH</span>
+            </a>
+            <a href="../culture/index.html" class="nav-item">
+                <i class="fas fa-palette"></i>
+                <span>Culture</span>
+            </a>
+            <a href="../associations/index.html" class="nav-item active">
+                <i class="fas fa-users"></i>
+                <span>Associations</span>
+            </a>
+            <a href="../temoignages/index.html" class="nav-item">
+                <i class="fas fa-heart"></i>
+                <span>Témoignages</span>
+            </a>
+            <a href="../luttes-handies/index.html" class="nav-item">
+                <i class="fas fa-fist-raised"></i>
+                <span>Luttes handies</span>
+            </a>
+            <a href="../maladies/index.html" class="nav-item">
+                <i class="fas fa-notes-medical"></i>
+                <span>Maladies & Symptômes</span>
+            </a>
+            <a href="../pair-aidance/index.html" class="nav-item">
+                <i class="fas fa-hands-helping"></i>
+                <span>Pair-aidance</span>
+            </a>
+            <a href="../etudes-recherches/index.html" class="nav-item">
+                <i class="fas fa-flask"></i>
+                <span>Études & Recherches</span>
+            </a>
+            <a href="../mad-studies/index.html" class="nav-item">
+                <i class="fas fa-book-open"></i>
+                <span>Mad Studies</span>
+            </a>
+            <a href="../psychiatrie/index.html" class="nav-item">
+                <i class="fas fa-hospital"></i>
+                <span>Psychiatrie</span>
+            </a>
+        </div>
+
+        <div class="nav-footer">
+            <button id="darkModeToggle" class="dark-mode-btn" aria-label="Mode sombre">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main class="main-wrapper">
+
+        <!-- Header de catégorie -->
+        <header class="category-hero" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+            <div class="container">
+                <a href="../index.html" class="breadcrumb">
+                    <i class="fas fa-arrow-left"></i> Retour à l'accueil
+                </a>
+                <div class="category-hero-content">
+                    <div class="category-hero-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div>
+                        <h1 class="category-hero-title">Associations</h1>
+                        <p class="category-hero-desc"></p>
+                        <span class="category-hero-count"><i class="fas fa-link"></i> 34 ressources</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Barre de recherche -->
+        <section class="search-section">
+            <div class="container">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" id="localSearch" placeholder="Rechercher dans cette catégorie...">
+                    <button class="clear-search" id="clearSearch" style="display: none;">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <p class="results-info" id="resultsInfo"></p>
+            </div>
+        </section>
+
+        <!-- Grille de ressources -->
+        <section class="resources-section container">
+            <div class="resources-grid" id="resourcesList">
+
+                <!-- Profamille -->
+                <a href="https://profamille.site/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Profamille</h3>
+                        <p class="resource-description">Programme de formation et soutien pour les familles</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- Pénal et Psychiatrie -->
+                <a href="https://www.penaletpsychiatrie.fr/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Défendre les personnes vulnérables face à la justice pénale</h3>
+                        <p class="resource-description">Soutien juridique et accompagnement</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- Psychoactif -->
+                <a href="https://www.psychoactif.org/forum/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Psychoactif - Réduction des risques</h3>
+                        <p class="resource-description">S'informer, s'entraider et réduire les risques sur les drogues</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- Croix-Rouge -->
+                <a href="https://www.croix-rouge.fr/soutien-psychosocial-par-telephone" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #f5576c 0%, #e63946 100%);">
+                        <i class="fas fa-phone-volume"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Soutien psychosocial par téléphone | Croix-Rouge française</h3>
+                        <p class="resource-description">Écoute et soutien téléphonique gratuit</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- Forum La Roue -->
+                <a href="https://forum.la-roue.org/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Schizophrénie - Forum d'entraide La Roue</h3>
+                        <p class="resource-description">Forum communautaire d'entraide entre pairs</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- Nightline -->
+                <a href="https://www.nightline.fr/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Nightline France - Ligne d'écoute santé mentale étudiante</h3>
+                        <p class="resource-description">Écoute nocturne par et pour les étudiants</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- CEAPSY -->
+                <a href="https://www.ceapsy-idf.org/accueil" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">CEAPSY - Ile de France</h3>
+                        <p class="resource-description">Centre d'entraide et d'accompagnement psychologique</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- PSSM France -->
+                <a href="https://www.pssmfrance.fr/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                        <i class="fas fa-first-aid"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Premiers Secours en Santé Mentale France</h3>
+                        <p class="resource-description">Formation aux premiers secours en santé mentale</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- SoinSoin -->
+                <a href="https://soinsoin.fr/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Journal SoinSoin</h3>
+                        <p class="resource-description">Média participatif sur la santé mentale</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- Fondation Pierre Deniker -->
+                <a href="https://www.fondationpierredeniker.org/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Fondation Pierre Deniker</h3>
+                        <p class="resource-description">Recherche et prévention en santé mentale</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- Santé Psy Jeunes - Brochures -->
+                <a href="https://www.santepsyjeunes.fr/brochures" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <i class="fas fa-file-medical"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Brochures - Santé Psy Jeunes</h3>
+                        <p class="resource-description">Documentation pour les jeunes en souffrance psychique</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- Santé Info Droits -->
+                <a href="https://www.france-assos-sante.org/actualite/lobservatoire-2023-de-sante-info-droits-est-arrive/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">L'Observatoire 2023 de Santé Info Droits</h3>
+                        <p class="resource-description">Informations sur les droits des patients</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- Fondation Fondamental -->
+                <a href="https://www.fondation-fondamental.org/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Fondation Fondamental</h3>
+                        <p class="resource-description">Recherche et soins en psychiatrie</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- Contrôleur Général -->
+                <a href="https://www.cglpl.fr/en" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Contrôleur Général des Lieux de Privation de Liberté</h3>
+                        <p class="resource-description">Contrôle des établissements psychiatriques</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- Défenseur des droits -->
+                <a href="https://www.defenseurdesdroits.fr/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Défenseur des droits</h3>
+                        <p class="resource-description">Protection des droits et libertés</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- Santé Psy Jeunes -->
+                <a href="https://www.santepsyjeunes.fr/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Accueil - Santé Psy Jeunes</h3>
+                        <p class="resource-description">Plateforme d'aide psychologique pour les jeunes</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- Droit Pluriel -->
+                <a href="https://droitpluriel.fr/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-universal-access"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Droit Pluriel</h3>
+                        <p class="resource-description">Accès au droit pour tous les handicaps</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- Advocacy France -->
+                <a href="https://www.advocacy.fr/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Advocacy France</h3>
+                        <p class="resource-description">Défense des droits des usagers de la psychiatrie</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- Solidarités Usagers Psy -->
+                <a href="https://www.solidarites-usagerspsy.fr/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Solidarités Usagers Psy</h3>
+                        <p class="resource-description">Collectif d'usagers et ex-usagers de la psychiatrie</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- PromesseS -->
+                <a href="https://www.promesses-sz.fr/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Association PromesseS</h3>
+                        <p class="resource-description">Soutien aux personnes touchées par la schizophrénie</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- Schizo-Espoir -->
+                <a href="https://www.schizoespoir.com/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Accueil - Association Schizo-Espoir</h3>
+                        <p class="resource-description">Entraide et espoir face à la schizophrénie</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- Schizo oui -->
+                <a href="https://www.schizo-oui.com/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Schizo oui</h3>
+                        <p class="resource-description">Information et déstigmatisation</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- REV France -->
+                <a href="https://revfrance.org/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-ear-listen"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Réseau français sur l'entente de voix</h3>
+                        <p class="resource-description">Approche alternative des hallucinations auditives</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- Igor Thiriez -->
+                <a href="https://igorthiriez.com/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                        <i class="fas fa-guitar"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">ALIÉNISTE & ROCKOLOGUE</h3>
+                        <p class="resource-description">Psychiatre, musicien et pair-aidant</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- 3114 -->
+                <a href="https://3114.fr/je-suis-en-souffrance/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Je suis en souffrance - 3114</h3>
+                        <p class="resource-description">Numéro national de prévention du suicide</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- Petite Mu -->
+                <a href="https://www.petitemu.fr/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Petite Mu : Sensibilisation aux Handicaps Invisibles en Entreprise</h3>
+                        <p class="resource-description">Inclusion professionnelle des handicaps invisibles</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- Collectif Schizophrénies -->
+                <a href="https://www.collectif-schizophrenies.com/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Collectif Schizophrénies : 1er portail français sur la schizophrénie</h3>
+                        <p class="resource-description">Hub d'information et de ressources</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- Comme des fous -->
+                <a href="https://www.commedesfous.com/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-theater-masks"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Comme des fous – Changer les regards sur la folie</h3>
+                        <p class="resource-description">Déstigmatisation et changement des représentations</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- Schizinfo -->
+                <a href="https://schizinfo.com/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                        <i class="fas fa-calendar-day"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Journées de la Schizophrénie - Schizinfo</h3>
+                        <p class="resource-description">Événement national de sensibilisation</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- La Maison Perchée -->
+                <a href="https://www.maisonperchee.org/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">La Maison Perchée</h3>
+                        <p class="resource-description">Lieu d'accueil, de répit et de pair-aidance</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- Psycom -->
+                <a href="https://www.psycom.org/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Psycom, le site d'informations sur la santé mentale</h3>
+                        <p class="resource-description">Informations fiables sur la santé mentale</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- PositiveMinders -->
+                <a href="https://positiveminders.com/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Regardons les troubles psy autrement - PositiveMinders</h3>
+                        <p class="resource-description">Plateforme de sensibilisation positive</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- Unafam -->
+                <a href="https://www.unafam.org/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-people-arrows"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Unafam</h3>
+                        <p class="resource-description">Union nationale de familles et amis de personnes malades</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <!-- Retab -->
+                <a href="https://www.retab.fr/accueil/dispositifs.php" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                        <i class="fas fa-toolbox"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Retab.fr</h3>
+                        <p class="resource-description">Outils de rétablissement et réhabilitation psychosociale</p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+            </div>
+
+            <!-- Message si aucun résultat -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>Aucun résultat trouvé</h3>
+                <p>Essayez avec d'autres mots-clés</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4><i class="fas fa-brain"></i> Schizothèque</h4>
+                        <p>Hub communautaire de ressources sur la schizophrénie</p>
+                        <p class="credits">
+                            Basé sur <a href="https://www.pearltrees.com/chabelitza/panorama-schizo/id86766449" target="_blank">Panorama Schizo</a>
+                        </p>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4><i class="fas fa-phone-alt"></i> Urgences</h4>
+                        <ul class="urgence-list">
+                            <li><strong>3114</strong> - Numéro national de prévention du suicide</li>
+                            <li><strong>15</strong> - SAMU</li>
+                            <li><strong>112</strong> - Urgences européennes</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4><i class="fas fa-hands-helping"></i> Contribuer</h4>
+                        <p>Ce projet est open source et communautaire.</p>
+                        <a href="https://github.com/votre-repo" class="btn-contribute" target="_blank">
+                            <i class="fab fa-github"></i> Contribuer sur GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>
+                        &copy; 2026 Schizothèque • 
+                        <a href="https://github.com/anna.mamelli/schizotheque" target="_blank">Open Source</a> • 
+                        Fait avec <i class="fas fa-heart"></i> pour la communauté
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Bouton retour en haut -->
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

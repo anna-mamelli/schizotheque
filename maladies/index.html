@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Maladies & Symptômes - Ressources sur la schizophrénie">
+    <title>Maladie - Schizothèque</title>
+
+    <link rel="icon" href="../data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="has-floating-nav">
+
+    <!-- Navigation flottante -->
+    <nav class="floating-nav" id="floatingNav">
+        <div class="nav-header">
+            <a href="../index.html" class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <span>Schizothèque</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <div class="nav-menu" id="navMenu">
+            <a href="../index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Accueil</span>
+            </a>
+            <a href="../mdph-aah/index.html" class="nav-item">
+                <i class="fas fa-file-contract"></i>
+                <span>MDPH - AAH</span>
+            </a>
+            <a href="../culture/index.html" class="nav-item">
+                <i class="fas fa-palette"></i>
+                <span>Culture</span>
+            </a>
+            <a href="../associations/index.html" class="nav-item">
+                <i class="fas fa-users"></i>
+                <span>Associations</span>
+            </a>
+            <a href="../temoignages/index.html" class="nav-item">
+                <i class="fas fa-heart"></i>
+                <span>Témoignages</span>
+            </a>
+            <a href="../luttes-handies/index.html" class="nav-item">
+                <i class="fas fa-fist-raised"></i>
+                <span>Luttes handies</span>
+            </a>
+            <a href="../maladies/index.html" class="nav-item active">
+                <i class="fas fa-notes-medical"></i>
+                <span>Maladies & Symptômes</span>
+            </a>
+            <a href="../pair-aidance/index.html" class="nav-item">
+                <i class="fas fa-hands-helping"></i>
+                <span>Pair-aidance</span>
+            </a>
+            <a href="../etudes-recherches/index.html" class="nav-item">
+                <i class="fas fa-flask"></i>
+                <span>Études & Recherches</span>
+            </a>
+            <a href="../mad-studies/index.html" class="nav-item">
+                <i class="fas fa-book-open"></i>
+                <span>Mad Studies</span>
+            </a>
+            <a href="../psychiatrie/index.html" class="nav-item">
+                <i class="fas fa-hospital"></i>
+                <span>Psychiatrie</span>
+            </a>
+        </div>
+
+        <div class="nav-footer">
+            <button id="darkModeToggle" class="dark-mode-btn" aria-label="Mode sombre">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <i class="fas fa-stethoscope"></i>
+                    Maladie - Symptômes - Vie quotidienne
+                </h1>
+                <p class="hero-subtitle">Comprendre la schizophrénie et vivre avec</p>
+            </div>
+        </header>
+
+        <!-- Catégories maladies en grille -->
+        <section class="categories-grid container">
+            <h2 class="section-title">Explorer la maladie, les symptômes et la vie quotidienne</h2>
+
+            <div class="grid">
+
+                <!-- Effets secondaires psychotropes -->
+                <a href="./psychotropes.html" class="category-card">
+                    <div class="category-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <div class="category-info">
+                        <h3 class="category-title">Effets secondaires des psychotropes</h3>
+                        <p class="category-desc">Comprendre et gérer les effets des traitements</p>
+                        <span class="category-count"><i class="fas fa-link"></i> 3 ressources</span>
+                    </div>
+                </a>
+
+                <!-- Trauma -->
+                <a href="./Trauma.html" class="category-card">
+                    <div class="category-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-heart-broken"></i>
+                    </div>
+                    <div class="category-info">
+                        <h3 class="category-title">Trauma - Troubles anxieux - PTSD - Dépersonnalisation</h3>
+                        <p class="category-desc">Ressources sur les traumatismes et l'anxiété</p>
+                        <span class="category-count"><i class="fas fa-link"></i> 8 ressources</span>
+                    </div>
+                </a>
+
+                <!-- Maternité -->
+                <a href="./Maternité.html" class="category-card">
+                    <div class="category-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-baby-carriage"></i>
+                    </div>
+                    <div class="category-info">
+                        <h3 class="category-title">Maternité/Paternité et schizophrénie</h3>
+                        <p class="category-desc">Être parent avec la schizophrénie</p>
+                        <span class="category-count"><i class="fas fa-link"></i> 30+ ressources</span>
+                    </div>
+                </a>
+
+                <!-- Suicide -->
+                <a href="./suicide.html" class="category-card">
+                    <div class="category-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <i class="fas fa-phone-volume"></i>
+                    </div>
+                    <div class="category-info">
+                        <h3 class="category-title">Prévention suicide - Comorbidités</h3>
+                        <p class="category-desc">Ressources de prévention et d'aide</p>
+                        <span class="category-count"><i class="fas fa-link"></i> 10 ressources</span>
+                    </div>
+                </a>
+
+                <!-- Troubles cognitifs -->
+                <a href="./troubles-cognitifs.html" class="category-card">
+                    <div class="category-icon" style="background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%);">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="category-info">
+                        <h3 class="category-title">Troubles cognitifs</h3>
+                        <p class="category-desc">Mémoire, attention, fonctions exécutives</p>
+                        <span class="category-count"><i class="fas fa-link"></i> 3 ressources</span>
+                    </div>
+                </a>
+
+                <!-- Des schizophrénies -->
+                <a href="./schizophrenies.html" class="category-card">
+                    <div class="category-icon" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="category-info">
+                        <h3 class="category-title">Des schizophrénies</h3>
+                        <p class="category-desc">Les différentes formes de la maladie</p>
+                        <span class="category-count"><i class="fas fa-link"></i> 21 ressources</span>
+                    </div>
+                </a>
+
+                <!-- Saillance aberrante -->
+                <a href="./saillance.html" class="category-card">
+                    <div class="category-icon" style="background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="category-info">
+                        <h3 class="category-title">Saillance aberrante</h3>
+                        <p class="category-desc">Quand le cerveau donne de l'importance à tort</p>
+                        <span class="category-count"><i class="fas fa-link"></i> 4 ressources</span>
+                    </div>
+                </a>
+
+                <!-- Insight -->
+                <a href="./insight.html" class="category-card">
+                    <div class="category-icon" style="background: linear-gradient(135deg, #fdcbf1 0%, #e6dee9 100%);">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="category-info">
+                        <h3 class="category-title">Insight</h3>
+                        <p class="category-desc">Conscience et compréhension de la maladie</p>
+                        <span class="category-count"><i class="fas fa-link"></i> 3 ressources</span>
+                    </div>
+                </a>
+
+                <!-- Désorganisation -->
+                <a href="./desorganisation.html" class="category-card">
+                    <div class="category-icon" style="background: linear-gradient(135deg, #ff6e7f 0%, #bfe9ff 100%);">
+                        <i class="fas fa-random"></i>
+                    </div>
+                    <div class="category-info">
+                        <h3 class="category-title">Désorganisation de la pensée</h3>
+                        <p class="category-desc">Troubles du cours de la pensée</p>
+                        <span class="category-count"><i class="fas fa-link"></i> 3 ressources</span>
+                    </div>
+                </a>
+
+                <!-- Symptômes négatifs -->
+                <a href="./symptomes-negatifs.html" class="category-card">
+                    <div class="category-icon" style="background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);">
+                        <i class="fas fa-minus-circle"></i>
+                    </div>
+                    <div class="category-info">
+                        <h3 class="category-title">Symptômes négatifs (déficitaires)</h3>
+                        <p class="category-desc">Aboulie, anhédonie, émoussement affectif</p>
+                        <span class="category-count"><i class="fas fa-link"></i> 5 ressources</span>
+                    </div>
+                </a>
+
+                <!-- Symptômes positifs -->
+                <a href="./symptomes-positifs.html" class="category-card">
+                    <div class="category-icon" style="background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);">
+                        <i class="fas fa-plus-circle"></i>
+                    </div>
+                    <div class="category-info">
+                        <h3 class="category-title">Symptômes positifs (productifs)</h3>
+                        <p class="category-desc">Hallucinations, délires, troubles du langage</p>
+                        <span class="category-count"><i class="fas fa-link"></i> 22 ressources</span>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4><i class="fas fa-brain"></i> Schizothèque</h4>
+                        <p>Hub communautaire de ressources sur la schizophrénie</p>
+                        <p class="credits">
+                            Basé sur <a href="https://www.pearltrees.com/chabelitza/panorama-schizo/id86766449" target="_blank">Panorama Schizo</a>
+                        </p>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4><i class="fas fa-phone-alt"></i> Urgences</h4>
+                        <ul class="urgence-list">
+                            <li><strong>3114</strong> - Numéro national de prévention du suicide</li>
+                            <li><strong>15</strong> - SAMU</li>
+                            <li><strong>112</strong> - Urgences européennes</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4><i class="fas fa-hands-helping"></i> Contribuer</h4>
+                        <p>Ce projet est open source et communautaire.</p>
+                        <a href="https://anna-mamelli.github.com/schizotheque" class="btn-contribute" target="_blank">
+                            <i class="fab fa-github"></i> Contribuer sur GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>
+                        &copy; 2026 Schizothèque • 
+                        <a href="https://anna-mamelli.github.com/schizotheque" target="_blank">Open Source</a> • 
+                        Fait avec <i class="fas fa-heart"></i> pour la communauté
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Bouton retour en haut -->
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
