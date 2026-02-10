@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Articles - Journaux">
+    <title>Articles - Journaux | Luttes handies | Schizothèque</title>
+
+    <link rel="icon" href="../data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="has-floating-nav">
+
+    <!-- Navigation flottante -->
+    <nav class="floating-nav" id="floatingNav">
+        <div class="nav-header">
+            <a href="../index.html" class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <span>Schizothèque</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <div class="nav-menu" id="navMenu">
+            <a href="../index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Accueil</span>
+            </a>
+            <a href="../mdph-aah/index.html" class="nav-item">
+                <i class="fas fa-file-contract"></i>
+                <span>MDPH - AAH</span>
+            </a>
+            <a href="../culture/index.html" class="nav-item">
+                <i class="fas fa-palette"></i>
+                <span>Culture</span>
+            </a>
+            <a href="../associations/index.html" class="nav-item">
+                <i class="fas fa-users"></i>
+                <span>Associations</span>
+            </a>
+            <a href="../temoignages/index.html" class="nav-item">
+                <i class="fas fa-heart"></i>
+                <span>Témoignages</span>
+            </a>
+            <a href="../luttes-handies/index.html" class="nav-item active">
+                <i class="fas fa-fist-raised"></i>
+                <span>Luttes handies</span>
+            </a>
+            <a href="../maladies/index.html" class="nav-item">
+                <i class="fas fa-notes-medical"></i>
+                <span>Maladies & Symptômes</span>
+            </a>
+            <a href="../pair-aidance/index.html" class="nav-item">
+                <i class="fas fa-hands-helping"></i>
+                <span>Pair-aidance</span>
+            </a>
+            <a href="../etudes-recherches/index.html" class="nav-item">
+                <i class="fas fa-flask"></i>
+                <span>Études & Recherches</span>
+            </a>
+            <a href="../mad-studies/index.html" class="nav-item">
+                <i class="fas fa-book-open"></i>
+                <span>Mad Studies</span>
+            </a>
+            <a href="/psychiatrie/index.html" class="nav-item">
+                <i class="fas fa-hospital"></i>
+                <span>Psychiatrie</span>
+            </a>
+        </div>
+
+        <div class="nav-footer">
+            <button id="darkModeToggle" class="dark-mode-btn" aria-label="Mode sombre">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main class="main-wrapper">
+
+        <!-- Header de sous-catégorie -->
+        <header class="category-hero" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+            <div class="container">
+                <a href="./index.html" class="breadcrumb">
+                    <i class="fas fa-arrow-left"></i> Retour à Psychiatrie
+                </a>
+                <div class="category-hero-content">
+                    <div class="category-hero-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div>
+                        <h1 class="category-hero-title">Articles - Journaux</h1>
+                        <p class="category-hero-desc"></p>
+                        <span class="category-hero-count"><i class="fas fa-link"></i> 35 ressources</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Barre de recherche -->
+        <section class="search-section">
+            <div class="container">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" id="localSearch" placeholder="Rechercher dans cette catégorie...">
+                    <button class="clear-search" id="clearSearch" style="display: none;">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <p class="results-info" id="resultsInfo"></p>
+            </div>
+        </section>
+
+        <!-- Grille de ressources -->
+        <section class="resources-section container">
+            <div class="resources-grid" id="resourcesList">
+
+                
+                <a href="https://solidarites.ch/numero/457-2/numero-special-antivalidisme/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-notes-medical"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Numéro spécial (anti-)validisme</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                
+                <a href="https://blogs.mediapart.fr/cerridwen/blog/090419/nous-handies-nous-voulons-vivre" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Nous, handi(e)s, nous voulons vivre</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <a href="https://solidarites.ch/journal/457-2/lutter-pour-la-desinstitutionnalisation/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Lutter pour la désinstitutionnalisation</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://lmsi.net/S-inspirer-des-theories-queer-pour-interroger-le-handicap-le-mouvement-crip" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">S’inspirer des théories queer pour interroger le handicap : le mouvement crip</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://rebellyon.info/Devenir-handi-e-partie-1-coming-in-A-ta-33103" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Devenir handi’e, partie 1 : coming in | À ta santé camarade ! #12</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://drive.google.com/file/d/1IM5Rg4AxQQs-Fnzb_y7kPaJDFjhIyz9s/view" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Ce que l’antifascisme a à voir avec l’antivalidisme</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.autonomiedeclasse.org/retours-militants/le-validisme-pilier-du-capitalisme/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Le validisme, pilier du capitalisme ?</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://disabilityvisibilityproject.com/2025/10/15/graphic-with-a-white-background-with-text-that-reads-the-state-of-critical-race-disability-studies-a-white-paper-report-from-the-disabled-scholars-of-color-collective/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">The State of Critical Race Disability Studies A White Paper Report from the Disabled…</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://blogs.mediapart.fr/raphael-zahiri/blog/230725/re-duits-un-mot-ce-que-le-validisme-re-ve-le-de-la-hie-rarchie-moderne-des-e-tres" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Réduits à un mot : ce que le validisme révèle de la hiérarchie moderne des êtres</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://archivesautonomies.org/spip.php?article9" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Sommaires du journal Handicapés Méchants (1974-1979) - [Fragments d'Histoire de…</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://reporterre.net/La-lutte-ecologiste-pas-assez-inclusive-pour-les-personnes-handicapees" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">La lutte écologiste, pas assez inclusive pour les personnes handicapées</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.cgt.fr/le-handicap-est-un-combat-syndical" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Le handicap est un combat syndical - CGT</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://blogs.mediapart.fr/laurem/blog/210425/denoncons-le-validisme-et-repensons-l-accessibilite-associative" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Dénonçons le validisme et repensons l’accessibilité associative</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://blogs.mediapart.fr/elena-chamorro/blog/270624/les-personnes-handicapees-une-minorite-menacee-par-l-extreme-droite" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-notes-medical"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Les personnes handicapées : une minorité menacée par l’extrême droite</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                
+                <a href="https://www.questionsdeclasses.org/le-service-public-audiovisuel-normalise-t-il-lenfermement-et-le-meurtre-denfants-handicapees/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Le service public audiovisuel normalise-t-il l’enfermement et le meurtre d’enfants…</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <a href="https://www.mediapart.fr/journal/france/120325/le-passe-oublie-des-pensionnats-sanitaires-machines-broyer-plutot-qu-soigner" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Le passé oublié des pensionnats sanitaires, machines à broyer plutôt qu’à soigner</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://lesdevalideuses.org/les-violences-sexistes-et-sexuelles-en-institution-un-enjeu-antivalidiste-et-feministe/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Les violences sexistes et sexuelles en institution : un enjeu antivalidiste et…</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://blogs.mediapart.fr/lili-guigueno/blog/270225/disability-day-mourning-reconnaitre-les-victimes-de-linstitutionnalisation" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Disability Day of Mourning : reconnaitre les victimes de l'institutionnalisation</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://lesoursesaplumes.info/2025/02/14/une-grossesse-ordinaire-la-grossesse-ma-personnellement-permis-de-faire-confiance-a-mon-propre-corps-den-constater-toute-cette-force-dont-je-netais-pas-consciente/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Une grossesse ordinaire : "La grossesse m'a personnellement permis de faire…</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://blogs.mediapart.fr/les-devalideuses/blog/100225/20-ans-de-loi-pour-l-egalite-des-chances-des-personnes-handicapees-bilan-antivalidiste" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Les Dévalideuses- 20 ans de loi pour l’égalité des chances des personnes handicapées :…</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://blogs.mediapart.fr/elena-chamorro/blog/050225/associations-gestionnaires-kesako" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Associations gestionnaires : kesako ?</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://paris-luttes.info/pour-un-antifascisme-antivalidiste-18188" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Pour un antifascisme antivalidiste</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.liberation.fr/apps/2017/03/handicap-ces-militants-qui-cassent-les-codes/#chapitre-1" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Libération.fr – Handicap : ces militants qui cassent les codes</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://shs.cairn.info/revue-sens-dessous-2011-1-page-32?lang=fr" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Les noces du courage et du handicap </h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://infokiosques.net/spip.php?auteur99" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">La culture du valide occidental, Zig Blanquer, 2004</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://lesoursesaplumes.info/2024/11/06/assujettir-les-corps-a-une-norme-medicale-quoi-quil-en-coute-les-personnes-intersexes-et-les-personnes-handicapees-au-coeur-dune-violence-pour-leur-bien/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Assujettir les corps à une norme médicale, quoi qu’il en coûte ?  Les personnes…</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://lesoursesaplumes.info/2022/01/28/developpement-des-luttes-anti-validistes-sur-les-reseaux/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Développement des luttes anti-validistes sur les réseaux sociaux – Les Ourses à plumes</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.manifesto-21.com/parlons-de-sante-mentale-folie-douce-et-discours-tiedes/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">« Parlons de santé mentale »: folie douce et discours tièdes</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="« Parlons de santé mentale »: folie douce et discours tièdes" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">N'ayez pas peur des mots - Portfolio d'Emmanuelle ABOAF</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://informations.handicap.fr/a-choix-des-mots-5633.php" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Infirme à personne en situation de handicap : combat de mots</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.mediapart.fr/journal/france/291121/aides-aux-personnes-handicapees-un-debat-confisque#at_medium=custom7&at_campaign=1047" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Aides aux personnes handicapées : un débat confisqué</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.mediapart.fr/journal/france/291121/handicap-des-militants-l-assaut-de-l-oppression-validiste#at_medium=custom7&at_campaign=1047" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Handicap : des militants à l’assaut de l’oppression « validiste »</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.mediapart.fr/journal/france/291121/ecole-inclusive-les-lecons-du-modele-italien" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">École inclusive : les leçons du modèle italien</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://shs.cairn.info/revue-multitudes-2024-1-page-55?lang=fr" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Dévalider</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://blogs.mediapart.fr/claude-deutsch/blog/010710/contribution-lhistoire-du-mouvement-des-usagers-en-sante-mentale-en-" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Contribution à l'histoire du mouvement des usagers en santé mentale en France.</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+            </div>
+
+            <!-- Message si aucun résultat -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>Aucun résultat trouvé</h3>
+                <p>Essayez avec d'autres mots-clés</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4><i class="fas fa-brain"></i> Schizothèque</h4>
+                        <p>Hub communautaire de ressources sur la schizophrénie</p>
+                        <p class="credits">
+                            Basé sur <a href="https://www.pearltrees.com/chabelitza/panorama-schizo/id86766449" target="_blank">Panorama Schizo</a>
+                        </p>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4><i class="fas fa-phone-alt"></i> Urgences</h4>
+                        <ul class="urgence-list">
+                            <li><strong>3114</strong> - Numéro national de prévention du suicide</li>
+                            <li><strong>15</strong> - SAMU</li>
+                            <li><strong>112</strong> - Urgences européennes</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4><i class="fas fa-hands-helping"></i> Contribuer</h4>
+                        <p>Ce projet est open source et communautaire.</p>
+                        <a href="https://anna-mamelli.github.com/schizotheque" class="btn-contribute" target="_blank">
+                            <i class="fab fa-github"></i> Contribuer sur GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>
+                        &copy; 2026 Schizothèque • 
+                        <a href="https://anna-mamelli.github.com/schizotheque" target="_blank">Open Source</a> • 
+                        Fait avec <i class="fas fa-heart"></i> pour la communauté
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Bouton retour en haut -->
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

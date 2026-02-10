@@ -3,304 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Symptômes - Schizothèque</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-    <header>
-        <div class="header-container">
-            <h1>🧠 Schizothèque</h1>
-            <p>Ressources sur la schizophrénie</p>
-        </div>
-    </header>
+    <meta name="description" content="Saillance aberrante">
+    <title>Saillance aberrante | Maladie | Schizothèque</title>
 
-    <nav>
-        <ul>
-            <li><a href="../index.html">🏠 Accueil</a></li>
-            <li><a href="../mdph-aah.html">📋 MDPH & AAH</a></li>
-            <li><a href="../culture/index.html">🎨 Culture</a></li>
-            <li><a href="../associations.html">🏢 Associations</a></li>
-            <li><a href="../luttes-handies/index.html">✊ Luttes Handies</a></li>
-            <li><a href="index.html">🏥 Maladies</a></li>
-            <li><a href="../juridique/index.html">⚖️ Juridique</a></li>
-            <li><a href="../vie-quotidienne/index.html">🏡 Vie Quotidienne</a></li>
-            <li><a href="../proches/index.html">❤️ Proches</a></li>
-            <li><a href="../pair-aidance/index.html">🤝 Pair-aidance</a></li>
-        </ul>
+    <link rel="icon" href="../data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="has-floating-nav">
+
+    <!-- Navigation flottante -->
+    <nav class="floating-nav" id="floatingNav">
+        <div class="nav-header">
+            <a href="../index.html" class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <span>Schizothèque</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <div class="nav-menu" id="navMenu">
+            <a href="../index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Accueil</span>
+            </a>
+            <a href="../mdph-aah/index.html" class="nav-item">
+                <i class="fas fa-file-contract"></i>
+                <span>MDPH - AAH</span>
+            </a>
+            <a href="../culture/index.html" class="nav-item">
+                <i class="fas fa-palette"></i>
+                <span>Culture</span>
+            </a>
+            <a href="../associations/index.html" class="nav-item">
+                <i class="fas fa-users"></i>
+                <span>Associations</span>
+            </a>
+            <a href="../temoignages/index.html" class="nav-item">
+                <i class="fas fa-heart"></i>
+                <span>Témoignages</span>
+            </a>
+            <a href="../luttes-handies/index.html" class="nav-item">
+                <i class="fas fa-fist-raised"></i>
+                <span>Luttes handies</span>
+            </a>
+            <a href="../maladies/index.html" class="nav-item active">
+                <i class="fas fa-notes-medical"></i>
+                <span>Maladies & Symptômes</span>
+            </a>
+            <a href="../pair-aidance/index.html" class="nav-item">
+                <i class="fas fa-hands-helping"></i>
+                <span>Pair-aidance</span>
+            </a>
+            <a href="../etudes-recherches/index.html" class="nav-item">
+                <i class="fas fa-flask"></i>
+                <span>Études & Recherches</span>
+            </a>
+            <a href="../mad-studies/index.html" class="nav-item">
+                <i class="fas fa-book-open"></i>
+                <span>Mad Studies</span>
+            </a>
+            <a href="/psychiatrie/index.html" class="nav-item">
+                <i class="fas fa-hospital"></i>
+                <span>Psychiatrie</span>
+            </a>
+        </div>
+
+        <div class="nav-footer">
+            <button id="darkModeToggle" class="dark-mode-btn" aria-label="Mode sombre">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
     </nav>
 
-    <div class="breadcrumb">
-        <a href="../index.html">Accueil</a> / 
-        <a href="index.html">Maladies & Symptômes</a> / 
-        <span>Symptômes</span>
-    </div>
+    <!-- Contenu principal -->
+    <main class="main-wrapper">
 
-    <main>
-        <section class="content-section">
-            <h1>⚡ Les Symptômes de la Schizophrénie</h1>
-            <p class="intro">Les symptômes sont classiquement divisés en trois catégories : positifs, négatifs et cognitifs</p>
-            
-            <h2>Symptômes positifs</h2>
-            <p><em>On les appelle "positifs" car ils ajoutent des expériences qui ne sont normalement pas présentes</em></p>
-            
-            <div class="resource-list">
-                <div class="resource-item">
-                    <h3>Délires</h3>
-                    <p>Croyances erronées fermement maintenues malgré les preuves du contraire.</p>
-                    <p><strong>Types fréquents :</strong></p>
-                    <ul>
-                        <li><strong>Délire de persécution :</strong> Conviction d'être espionné, suivi, comploté contre</li>
-                        <li><strong>Délire de référence :</strong> Impression que des événements extérieurs ont un sens personnel</li>
-                        <li><strong>Délire de contrôle :</strong> Sensation d'être contrôlé par une force extérieure</li>
-                        <li><strong>Délire de grandeur :</strong> Conviction d'avoir des pouvoirs ou une mission spéciale</li>
-                        <li><strong>Délire mystique :</strong> Thèmes religieux ou spirituels envahissants</li>
-                    </ul>
-                    <p><strong>Vécu :</strong> Ces croyances sont très réelles pour la personne qui les vit</p>
-                </div>
-
-                <div class="resource-item">
-                    <h3>Hallucinations</h3>
-                    <p>Perceptions sensorielles sans stimulus externe réel.</p>
-                    <p><strong>Types :</strong></p>
-                    <ul>
-                        <li><strong>Auditives :</strong> Les plus fréquentes. Voix commentant, insultant, donnant des ordres</li>
-                        <li><strong>Visuelles :</strong> Voir des choses inexistantes</li>
-                        <li><strong>Olfactives :</strong> Sentir des odeurs</li>
-                        <li><strong>Tactiles :</strong> Sensations sur la peau</li>
-                        <li><strong>Gustatives :</strong> Goûts inhabituels</li>
-                    </ul>
-                    <p><strong>Vécu :</strong> Les hallucinations peuvent être terrifiantes ou parfois réconfortantes</p>
-                    <a href="#" target="_blank">Témoignages sur les voix →</a>
-                </div>
-
-                <div class="resource-item">
-                    <h3>Désorganisation de la pensée</h3>
-                    <p>Difficultés à organiser et exprimer ses pensées de façon cohérente.</p>
-                    <p><strong>Manifestations :</strong></p>
-                    <ul>
-                        <li>Discours décousu, sans fil conducteur</li>
-                        <li>Sauts du coq à l'âne</li>
-                        <li>Néologismes (mots inventés)</li>
-                        <li>Association par les sons plutôt que par le sens</li>
-                        <li>Blocages de la pensée</li>
-                    </ul>
-                </div>
-
-                <div class="resource-item">
-                    <h3>Comportement désorganisé</h3>
-                    <p>Difficultés à accomplir les activités quotidiennes, comportements imprévisibles.</p>
-                    <p><strong>Exemples :</strong></p>
-                    <ul>
-                        <li>Négligence de l'hygiène</li>
-                        <li>Vêtements inadaptés</li>
-                        <li>Comportements impulsifs</li>
-                        <li>Agitation sans but</li>
-                    </ul>
-                </div>
-
-                <div class="resource-item">
-                    <h3>Symptômes catatoniques</h3>
-                    <p>Troubles moteurs : immobilité, rigidité ou au contraire agitation excessive.</p>
-                    <p><strong>Note :</strong> Plus rares aujourd'hui grâce aux traitements</p>
+        <!-- Header de sous-catégorie -->
+        <header class="category-hero" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+            <div class="container">
+                <a href="./index.html" class="breadcrumb">
+                    <i class="fas fa-arrow-left"></i> Retour à Psychiatrie
+                </a>
+                <div class="category-hero-content">
+                    <div class="category-hero-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div>
+                        <h1 class="category-hero-title">Saillance aberrante</h1>
+                        <p class="category-hero-desc"></p>
+                        <span class="category-hero-count"><i class="fas fa-link"></i> 4 ressources</span>
+                    </div>
                 </div>
             </div>
+        </header>
 
-            <h2>Symptômes négatifs</h2>
-            <p><em>Appelés "négatifs" car ils correspondent à une diminution ou perte de capacités normales</em></p>
-            
-            <div class="resource-list">
-                <div class="resource-item">
-                    <h3>Émoussement affectif</h3>
-                    <p>Diminution de l'expression émotionnelle.</p>
-                    <p><strong>Manifestations :</strong></p>
-                    <ul>
-                        <li>Visage peu expressif</li>
-                        <li>Voix monotone</li>
-                        <li>Peu de contact visuel</li>
-                        <li>Gestes réduits</li>
-                    </ul>
-                    <p><strong>Important :</strong> La personne ressent des émotions, mais a du mal à les exprimer</p>
+        <!-- Barre de recherche -->
+        <section class="search-section">
+            <div class="container">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" id="localSearch" placeholder="Rechercher dans cette catégorie...">
+                    <button class="clear-search" id="clearSearch" style="display: none;">
+                        <i class="fas fa-times"></i>
+                    </button>
                 </div>
-
-                <div class="resource-item">
-                    <h3>Alogie (pauvreté du discours)</h3>
-                    <p>Réduction de la quantité ou du contenu de la parole.</p>
-                    <p><strong>Manifestations :</strong></p>
-                    <ul>
-                        <li>Réponses brèves</li>
-                        <li>Difficultés à élaborer</li>
-                        <li>Temps de latence important avant de répondre</li>
-                    </ul>
-                </div>
-
-                <div class="resource-item">
-                    <h3>Avolition (apathie)</h3>
-                    <p>Diminution de la motivation et de l'initiative.</p>
-                    <p><strong>Impact :</strong></p>
-                    <ul>
-                        <li>Difficultés à démarrer et maintenir des activités</li>
-                        <li>Négligence des tâches quotidiennes</li>
-                        <li>Abandon de projets</li>
-                        <li>Diminution des soins personnels</li>
-                    </ul>
-                    <p><strong>Vécu :</strong> "Je sais que je devrais faire les choses, mais je n'arrive pas à m'y mettre"</p>
-                </div>
-
-                <div class="resource-item">
-                    <h3>Anhédonie</h3>
-                    <p>Difficulté à ressentir du plaisir dans les activités auparavant appréciées.</p>
-                    <p><strong>Conséquences :</strong></p>
-                    <ul>
-                        <li>Perte d'intérêt pour les loisirs</li>
-                        <li>Diminution des relations sociales</li>
-                        <li>Perte de plaisir dans les relations intimes</li>
-                    </ul>
-                </div>
-
-                <div class="resource-item">
-                    <h3>Retrait social</h3>
-                    <p>Diminution des interactions sociales et de l'intérêt pour les relations.</p>
-                    <p><strong>Manifestations :</strong></p>
-                    <ul>
-                        <li>Isolement progressif</li>
-                        <li>Évitement des contacts</li>
-                        <li>Perte d'amis</li>
-                        <li>Vie sociale très réduite</li>
-                    </ul>
-                </div>
-
-                <div class="resource-item">
-                    <h3>Difficulté des symptômes négatifs</h3>
-                    <p>Les symptômes négatifs sont souvent les plus invalidants au quotidien et les plus difficiles à traiter.</p>
-                    <p><strong>Important :</strong> Ils sont souvent confondus avec la dépression ou la "paresse"</p>
-                    <a href="#" target="_blank">Comprendre les symptômes négatifs →</a>
-                </div>
-            </div>
-
-            <h2>Symptômes cognitifs</h2>
-            <p><em>Troubles des fonctions intellectuelles</em></p>
-            
-            <div class="resource-list">
-                <div class="resource-item">
-                    <h3>Troubles de l'attention</h3>
-                    <p>Difficultés à se concentrer, à maintenir son attention.</p>
-                    <p><strong>Impact :</strong> Difficultés à suivre une conversation, lire, regarder un film</p>
-                </div>
-
-                <div class="resource-item">
-                    <h3>Troubles de la mémoire</h3>
-                    <p>Problèmes de mémoire de travail (mémoire à court terme) et de mémoire prospective (se souvenir de faire quelque chose).</p>
-                    <p><strong>Exemples :</strong></p>
-                    <ul>
-                        <li>Oublier ce qu'on allait dire</li>
-                        <li>Oublier un rendez-vous</li>
-                        <li>Difficulté à retenir un numéro de téléphone</li>
-                    </ul>
-                </div>
-
-                <div class="resource-item">
-                    <h3>Troubles des fonctions exécutives</h3>
-                    <p>Difficultés à planifier, organiser, résoudre des problèmes.</p>
-                    <p><strong>Conséquences :</strong></p>
-                    <ul>
-                        <li>Problèmes d'organisation du quotidien</li>
-                        <li>Difficultés à gérer plusieurs tâches</li>
-                        <li>Rigidité mentale</li>
-                        <li>Difficultés à s'adapter aux changements</li>
-                    </ul>
-                </div>
-
-                <div class="resource-item">
-                    <h3>Troubles de la cognition sociale</h3>
-                    <p>Difficultés à comprendre les émotions et intentions d'autrui.</p>
-                    <p><strong>Manifestations :</strong></p>
-                    <ul>
-                        <li>Difficulté à déchiffrer les expressions faciales</li>
-                        <li>Problèmes d'interprétation du langage non-verbal</li>
-                        <li>Malentendus sociaux fréquents</li>
-                    </ul>
-                </div>
-
-                <div class="resource-item">
-                    <h3>Ralentissement psychomoteur</h3>
-                    <p>Lenteur dans les mouvements et la pensée.</p>
-                    <p><strong>Impact :</strong> Tout prend plus de temps</p>
-                </div>
-
-                <div class="resource-item">
-                    <h3>Remédiation cognitive</h3>
-                    <p>Des programmes existent pour améliorer les fonctions cognitives.</p>
-                    <a href="../sante/remediation-cognitive.html">En savoir plus →</a>
-                </div>
-            </div>
-
-            <h2>Autres symptômes associés</h2>
-            <div class="resource-list">
-                <div class="resource-item">
-                    <h3>Troubles du sommeil</h3>
-                    <p>Insomnie, rythme veille-sommeil perturbé, cauchemars.</p>
-                    <a href="quotidien.html#sommeil">Gérer le sommeil →</a>
-                </div>
-
-                <div class="resource-item">
-                    <h3>Anxiété</h3>
-                    <p>Très fréquente, peut être liée aux symptômes ou indépendante.</p>
-                    <a href="comorbidites.html">Comorbidités →</a>
-                </div>
-
-                <div class="resource-item">
-                    <h3>Dépression</h3>
-                    <p>Environ 50% des personnes connaissent des épisodes dépressifs.</p>
-                    <p><strong>Attention :</strong> Risque suicidaire important en période dépressive</p>
-                </div>
-
-                <div class="resource-item">
-                    <h3>Insight (conscience des troubles)</h3>
-                    <p>Degré de conscience variable de ses propres symptômes.</p>
-                    <p><strong>Difficulté :</strong> Parfois la personne ne perçoit pas qu'elle est malade (anosognosie)</p>
-                </div>
-            </div>
-
-            <h2>Variabilité des symptômes</h2>
-            <div class="resource-list">
-                <div class="resource-item">
-                    <h3>Chaque personne est unique</h3>
-                    <p>Personne ne présente tous les symptômes. Le profil symptomatique varie grandement d'une personne à l'autre.</p>
-                </div>
-
-                <div class="resource-item">
-                    <h3>Fluctuation dans le temps</h3>
-                    <p>Les symptômes évoluent : phases aiguës avec symptômes positifs intenses, phases de stabilisation, phases de récupération.</p>
-                </div>
-
-                <div class="resource-item">
-                    <h3>Impact du traitement</h3>
-                    <p>Les traitements sont plus efficaces sur les symptômes positifs que négatifs et cognitifs.</p>
-                    <a href="../sante/traitements.html">Les traitements →</a>
-                </div>
-
-                <div class="resource-item">
-                    <h3>Facteurs aggravants</h3>
-                    <p>Stress, manque de sommeil, consommation de substances, arrêt du traitement peuvent aggraver les symptômes.</p>
-                    <a href="crises.html">Prévenir les rechutes →</a>
-                </div>
-            </div>
-
-            <div class="info-box">
-                <h2>💡 Vivre avec les symptômes</h2>
-                <p>De nombreuses stratégies existent pour gérer les symptômes au quotidien :</p>
-                <ul>
-                    <li><a href="quotidien.html">Aménagements du quotidien →</a></li>
-                    <li><a href="crises.html">Gérer les crises →</a></li>
-                    <li><a href="../pair-aidance/index.html">Pair-aidance et soutien →</a></li>
-                    <li><a href="retablissement.html">Le rétablissement →</a></li>
-                </ul>
+                <p class="results-info" id="resultsInfo"></p>
             </div>
         </section>
+
+        <!-- Grille de ressources -->
+        <section class="resources-section container">
+            <div class="resources-grid" id="resourcesList">
+
+                
+                <a href="https://www.pearltrees.com/s/file/preview/339193216/SM253_Saillance-aberrante-et-production-d--lirante.pdf?pearlId=666894269" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-notes-medical"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Saillance aberrante et production délirante - Santé mentale</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                
+                <a href="https://youtu.be/uZo9PWVCqUE" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Vécu psychotique et saillance aberrante</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <a href="https://www.santementale.fr/2020/07/vecu-psychotique-et-saillance-aberrante/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Vécu psychotique et saillance aberrante - Santé Mentale</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.santementale.fr/2024/06/la-saillance-aberrante-mieux-comprendre-le-delire-dans-la-schizophrenie/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">La saillance aberrante : mieux comprendre le délire dans la schizophrénie - Santé Mentale</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+            </div>
+
+            <!-- Message si aucun résultat -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>Aucun résultat trouvé</h3>
+                <p>Essayez avec d'autres mots-clés</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4><i class="fas fa-brain"></i> Schizothèque</h4>
+                        <p>Hub communautaire de ressources sur la schizophrénie</p>
+                        <p class="credits">
+                            Basé sur <a href="https://www.pearltrees.com/chabelitza/panorama-schizo/id86766449" target="_blank">Panorama Schizo</a>
+                        </p>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4><i class="fas fa-phone-alt"></i> Urgences</h4>
+                        <ul class="urgence-list">
+                            <li><strong>3114</strong> - Numéro national de prévention du suicide</li>
+                            <li><strong>15</strong> - SAMU</li>
+                            <li><strong>112</strong> - Urgences européennes</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4><i class="fas fa-hands-helping"></i> Contribuer</h4>
+                        <p>Ce projet est open source et communautaire.</p>
+                        <a href="https://anna-mamelli.github.com/schizotheque" class="btn-contribute" target="_blank">
+                            <i class="fab fa-github"></i> Contribuer sur GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>
+                        &copy; 2026 Schizothèque • 
+                        <a href="https://anna-mamelli.github.com/schizotheque" target="_blank">Open Source</a> • 
+                        Fait avec <i class="fas fa-heart"></i> pour la communauté
+                    </p>
+                </div>
+            </div>
+        </footer>
+
     </main>
 
-    <footer>
-        <p>&copy; 2025 Schizothèque - Ressources sur la schizophrénie</p>
-    </footer>
+    <!-- Bouton retour en haut -->
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="../js/main.js"></script>
 </body>
 </html>
