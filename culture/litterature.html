@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Littérature">
+    <title>Littérature | Culture | Schizothèque</title>
+
+    <link rel="icon" href="../data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="has-floating-nav">
+
+    <!-- Navigation flottante -->
+    <nav class="floating-nav" id="floatingNav">
+        <div class="nav-header">
+            <a href="../index.html" class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <span>Schizothèque</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <div class="nav-menu" id="navMenu">
+            <a href="../index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Accueil</span>
+            </a>
+            <a href="../mdph-aah/index.html" class="nav-item">
+                <i class="fas fa-file-contract"></i>
+                <span>MDPH - AAH</span>
+            </a>
+            <a href="../culture/index.html" class="nav-item">
+                <i class="fas fa-palette"></i>
+                <span>Culture</span>
+            </a>
+            <a href="../associations/index.html" class="nav-item">
+                <i class="fas fa-users"></i>
+                <span>Associations</span>
+            </a>
+            <a href="../temoignages/index.html" class="nav-item">
+                <i class="fas fa-heart"></i>
+                <span>Témoignages</span>
+            </a>
+            <a href="../luttes-handies/index.html" class="nav-item active">
+                <i class="fas fa-fist-raised"></i>
+                <span>Luttes handies</span>
+            </a>
+            <a href="../maladies/index.html" class="nav-item">
+                <i class="fas fa-notes-medical"></i>
+                <span>Maladies & Symptômes</span>
+            </a>
+            <a href="../pair-aidance/index.html" class="nav-item">
+                <i class="fas fa-hands-helping"></i>
+                <span>Pair-aidance</span>
+            </a>
+            <a href="../etudes-recherches/index.html" class="nav-item">
+                <i class="fas fa-flask"></i>
+                <span>Études & Recherches</span>
+            </a>
+            <a href="../mad-studies/index.html" class="nav-item">
+                <i class="fas fa-book-open"></i>
+                <span>Mad Studies</span>
+            </a>
+            <a href="/psychiatrie/index.html" class="nav-item">
+                <i class="fas fa-hospital"></i>
+                <span>Psychiatrie</span>
+            </a>
+        </div>
+
+        <div class="nav-footer">
+            <button id="darkModeToggle" class="dark-mode-btn" aria-label="Mode sombre">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main class="main-wrapper">
+
+        <!-- Header de sous-catégorie -->
+        <header class="category-hero" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+            <div class="container">
+                <a href="./index.html" class="breadcrumb">
+                    <i class="fas fa-arrow-left"></i> Retour à Psychiatrie
+                </a>
+                <div class="category-hero-content">
+                    <div class="category-hero-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div>
+                        <h1 class="category-hero-title">Littérature</h1>
+                        <p class="category-hero-desc"></p>
+                        <span class="category-hero-count"><i class="fas fa-link"></i> 31 ressources</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Barre de recherche -->
+        <section class="search-section">
+            <div class="container">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" id="localSearch" placeholder="Rechercher dans cette catégorie...">
+                    <button class="clear-search" id="clearSearch" style="display: none;">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <p class="results-info" id="resultsInfo"></p>
+            </div>
+        </section>
+
+        <!-- Grille de ressources -->
+        <section class="resources-section container">
+            <div class="resources-grid" id="resourcesList">
+
+                
+                <a href="https://editionsdesinstants.fr/requiem-au-bord-du-jour/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-notes-medical"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Requiem au bord du jour - Vincent Petitdemange - Éditions des instants</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                
+                <a href="https://www.lecavalierbleu.com/livre/plutot-vivre/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Plutôt vivre - Le Cavalier Bleu</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <a href="http://www.editionsdelolivier.fr/catalogue/9782823623376-un-frere" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Un frère - David Thomas - Éditions de l’Olivier</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://journals.openedition.org/cal/10186" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Gildas Brégain, Pour une histoire du handicap au xxe siècle. Approches transnationales…</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.editions-stock.fr/livre/et-cest-moi-quon-enferme-9782234097681/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Et c'est moi qu'on enferme (Grand format - Broché 2025), de Philippa Motte</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.puv-editions.fr/ouvrage/handicap-et-sante/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Handicap et santé - Presses Universitaires de Vincennes</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.odilejacob.fr/catalogue/psychologie/psychiatrie/dialogue-avec-moi-meme_9782738128935.php" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Dialogue avec moi-même un schizophrène témoigne - Polo Tonka</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.babelio.com/livres/Touzard-Folie-et-resistance/1821928" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Folie et résistance - Claire Touzard</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.seuil.com/ouvrage/zeno-lea-hirschfeld/9782021559675" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Zeno , Léa Hirschfeld, Littérature franç...</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.solidarites-usagerspsy.fr/divers/t%C3%A9moignages/temoignages-d-usagers-autobiographiques/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Témoignages et romans autobiographiques</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.pearltrees.com/chabelitza/litterature/id86880781#item702898204" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">La théorie féministe au défi du handicap</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.decitre.fr/livres/jeunes-femmes-pleines-de-promesses-9782371200593.html#resume" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Jeunes femmes pleines de promesses de Suzanne Scanlon</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://journals.openedition.org/lectures/45706" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Jonathan M. Metzl, Étouffer la révolte. La psychiatrie contre les Civil Rights, une…</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.babelio.com/livres/Lagouje-Une-grossesse-ordinaire/1774217" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-notes-medical"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Une grossesse ordinaire - Sushina Lagouje</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                
+                <a href="https://www.babelio.com/livres/Yon-Mon-vrai-nom-est-Elisabeth/1777228" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Mon vrai nom est Elisabeth - Adèle Yon</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <a href="https://www.ithaque-editions.com/product-page/halluciner" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Halluciner | Editions d'Ithaque</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.babelio.com/livres/Lestrade-Act-Up/1432396" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Act Up - Didier Lestrade</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.babelio.com/livres/Puiseux-De-chair-et-de-fer/1402129#!" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">De chair et de fer - Charlotte Puiseux</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.editions-harmattan.fr/catalogue/livre/impact-des-microagressions-et-de-la-discrimination-raciale-sur-la-sante-mentale-des-personnes-racisees/7148" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Impact des microagressions et de la discrimination raciale sur la santé mentale…</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.babelio.com/livres/Petit-Handicap-a-vendre/1397089" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Handicap à vendre - Thibault Petit</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.babelio.com/livres/Worms-Ehrminger-Vivre-avec-un-trouble-de-sante-mentale/1529541#!" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Vivre avec un trouble de santé mentale</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.babelio.com/livres/Lauveng-Demain-jetais-folle--Un-voyage-en-schizophrenie/563604" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Demain j'étais folle : Un voyage en schizophrénie</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.babelio.com/livres/Treize-Charge--Jouvre-le-huis-clos-psychiatrique/1496341" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Charge : J'ouvre le huis clos psychiatrique - Treize</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.commedesfous.com/parution-dabolir-la-contention" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Abolir la contention - Mathieu Bellahsen</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.babelio.com/livres/Gringe-Ensemble-on-aboie-en-silence/1241352" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Ensemble, on aboie en silence - Gringe</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://shs.cairn.info/ma-mere-est-schizophrene--9782749209807?lang=fr" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Ma mère est schizophrène</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.babelio.com/livres/Poire-Histoire-dune-schizophrenie--Jeremy-sa-famille-l/186621" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Histoire d'une schizophrénie : Jérémy, sa famille, la société</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.babelio.com/livres/Foucault-Histoire-de-la-folie-a-lage-classique/1518" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Histoire de la folie à l'âge classique</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.babelio.com/livres/Filer-Contrecoups/628806" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Contrecoups - Nathan Filer</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.babelio.com/livres/Seksik-Le-cas-Eduard-Einstein/512736" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Le cas Eduard Einstein - Laurent Seksik</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.radiofrance.fr/franceculture/podcasts/la-grande-table-1ere-partie/schizophrenie-et-litterature-louis-wolfson-9347016" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Schizophrénie et littérature : Louis Wolfson | France Culture</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+            </div>
+
+            <!-- Message si aucun résultat -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>Aucun résultat trouvé</h3>
+                <p>Essayez avec d'autres mots-clés</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4><i class="fas fa-brain"></i> Schizothèque</h4>
+                        <p>Hub communautaire de ressources sur la schizophrénie</p>
+                        <p class="credits">
+                            Basé sur <a href="https://www.pearltrees.com/chabelitza/panorama-schizo/id86766449" target="_blank">Panorama Schizo</a>
+                        </p>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4><i class="fas fa-phone-alt"></i> Urgences</h4>
+                        <ul class="urgence-list">
+                            <li><strong>3114</strong> - Numéro national de prévention du suicide</li>
+                            <li><strong>15</strong> - SAMU</li>
+                            <li><strong>112</strong> - Urgences européennes</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4><i class="fas fa-hands-helping"></i> Contribuer</h4>
+                        <p>Ce projet est open source et communautaire.</p>
+                        <a href="https://anna-mamelli.github.com/schizotheque" class="btn-contribute" target="_blank">
+                            <i class="fab fa-github"></i> Contribuer sur GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>
+                        &copy; 2026 Schizothèque • 
+                        <a href="https://anna-mamelli.github.com/schizotheque" target="_blank">Open Source</a> • 
+                        Fait avec <i class="fas fa-heart"></i> pour la communauté
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Bouton retour en haut -->
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
