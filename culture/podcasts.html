@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Podcasts - Radios">
+    <title>Podcasts - Radios | Culture | Schizothèque</title>
+
+    <link rel="icon" href="../data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="has-floating-nav">
+
+    <!-- Navigation flottante -->
+    <nav class="floating-nav" id="floatingNav">
+        <div class="nav-header">
+            <a href="../index.html" class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <span>Schizothèque</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <div class="nav-menu" id="navMenu">
+            <a href="../index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Accueil</span>
+            </a>
+            <a href="../mdph-aah/index.html" class="nav-item">
+                <i class="fas fa-file-contract"></i>
+                <span>MDPH - AAH</span>
+            </a>
+            <a href="../culture/index.html" class="nav-item">
+                <i class="fas fa-palette"></i>
+                <span>Culture</span>
+            </a>
+            <a href="../associations/index.html" class="nav-item">
+                <i class="fas fa-users"></i>
+                <span>Associations</span>
+            </a>
+            <a href="../temoignages/index.html" class="nav-item">
+                <i class="fas fa-heart"></i>
+                <span>Témoignages</span>
+            </a>
+            <a href="../luttes-handies/index.html" class="nav-item active">
+                <i class="fas fa-fist-raised"></i>
+                <span>Luttes handies</span>
+            </a>
+            <a href="../maladies/index.html" class="nav-item">
+                <i class="fas fa-notes-medical"></i>
+                <span>Maladies & Symptômes</span>
+            </a>
+            <a href="../pair-aidance/index.html" class="nav-item">
+                <i class="fas fa-hands-helping"></i>
+                <span>Pair-aidance</span>
+            </a>
+            <a href="../etudes-recherches/index.html" class="nav-item">
+                <i class="fas fa-flask"></i>
+                <span>Études & Recherches</span>
+            </a>
+            <a href="../mad-studies/index.html" class="nav-item">
+                <i class="fas fa-book-open"></i>
+                <span>Mad Studies</span>
+            </a>
+            <a href="/psychiatrie/index.html" class="nav-item">
+                <i class="fas fa-hospital"></i>
+                <span>Psychiatrie</span>
+            </a>
+        </div>
+
+        <div class="nav-footer">
+            <button id="darkModeToggle" class="dark-mode-btn" aria-label="Mode sombre">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main class="main-wrapper">
+
+        <!-- Header de sous-catégorie -->
+        <header class="category-hero" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+            <div class="container">
+                <a href="./index.html" class="breadcrumb">
+                    <i class="fas fa-arrow-left"></i> Retour à Psychiatrie
+                </a>
+                <div class="category-hero-content">
+                    <div class="category-hero-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div>
+                        <h1 class="category-hero-title">Podcasts - Radios</h1>
+                        <p class="category-hero-desc"></p>
+                        <span class="category-hero-count"><i class="fas fa-link"></i> 42 ressources</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Barre de recherche -->
+        <section class="search-section">
+            <div class="container">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" id="localSearch" placeholder="Rechercher dans cette catégorie...">
+                    <button class="clear-search" id="clearSearch" style="display: none;">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <p class="results-info" id="resultsInfo"></p>
+            </div>
+        </section>
+
+        <!-- Grille de ressources -->
+        <section class="resources-section container">
+            <div class="resources-grid" id="resourcesList">
+
+                
+                <a href="https://www.info.gouv.fr/actualite/tempete-mentale-le-podcast-qui-donne-la-parole-aux-troubles-psychiques" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-notes-medical"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">« Tempête mentale », le podcast qui donne la parole aux troubles psychiques</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                
+                <a href="https://www.cglpl.fr/publications/les-enferme-es-podcast" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Les Enfermé·es - Podcast - CGLPL</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <a href="https://www.radiofrance.fr/franceinter/podcasts/affaires-sensibles/affaires-sensibles-du-jeudi-18-decembre-2025-2257614" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Vichy : l’hécatombe des fous | France Inter</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.radiofrance.fr/franceculture/podcasts/carnets-de-sante/vivre-avec-un-handicap-8913298" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Charlotte Puiseux : « j'ai tout de suite été identifiée comme handicapée, et à…</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://glitch-devenir-handie.lepodcast.fr/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Glitch, devenir handi.e</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.rts.ch/audio-podcast/2025/audio/chiara-kahn-et-charlotte-puiseux-les-enjeux-du-handi-feminisme-29058056.html" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Chiara Kahn et Charlotte Puiseux, les enjeux du handi-féminisme | RTS</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://vivre.fm/posts/2025/11/chiara-kahn-fondatrice-de-conpassion-et-journaliste-handi-feministe/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">FM | Parle-moi : Parle-moi : Chiara Kahn</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.arteradio.com/son/malheur-niveau-2" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Malheur niveau 2</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://lodysseedecirce.lepodcast.fr/lodyssee-de-circe-14-la-normalite-cest-la-diversite" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">L’Odyssée de Circé 14 la normalité c'est la diversité. - L'odyssée de Circé</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://open.spotify.com/episode/4TlgZQxydRoMvR4wP7eYwL" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Devenir antivalidiste, avec Nono Le Ronchon</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.radiofrance.fr/franceinter/podcasts/le-debat-de-midi/le-debat-de-midi-du-vendredi-15-aout-2025-1197440" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Peut-on se passer de la contention psychiatrique ? | France Inter</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.radiofrance.fr/franceculture/podcasts/serie-maladies-chroniques-ce-qui-nous-traverse" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Maladies chroniques. Ce qui nous traverse : un podcast à écouter en ligne | France Culture</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://podcast.ausha.co/senstmentale/la-pair-aidance-aider-les-autres-a-travers-son-trouble-psychique" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">SensTMentale | La pair-aidance : aider les autres à travers son trouble psychique</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://smartlink.ausha.co/sciencespo-presage-genre-etc/la-theorie-feministe-au-defi-du-handicap-avec-mathea-boudinet" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-notes-medical"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">La théorie féministe au défi du handicap, avec Mathéa Boudinet | Genre, etc.</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                
+                <a href="https://smartlink.ausha.co/cnrs-qu-est-ce-que-tu-cherches/colonisation-quand-le-droit-enferme-les-esprits" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Colonisation, quand le droit enferme les esprits | Silvia Falconieri (CNRS) |…</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+                <a href="https://youtu.be/UYxEhFER4zs" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Féminisme et handicap : les corps indociles - Arte Radio - YouTube</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.radiofrance.fr/franceculture/podcasts/la-methode-scientifique/schizophrenie-une-maladie-qui-ne-va-pas-de-soi-3987958" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Schizophrénie : une maladie qui ne va pas de soi | France Culture</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.radiofrance.fr/franceculture/podcasts/la-science-cqfd/schizophrenie-5446230" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Schizophrénie : de nouveaux visages thérapeutiques | France Culture</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://open.spotify.com/episode/5i0BEyt6kCFdekFnxRfnu0" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">À la recherche de soins</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://open.spotify.com/episode/7wsfBC2daUYNHd6x0FRY71?si=fsPotgZ3RfCpemdai-r4bg&nd=1&dlsi=4cd81f5b82bc41ff" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Milieux protégés et handicap, quelles implications dans le travail ? - Dear Valid…</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://audioblog.arteradio.com/blog/139527/podcast/215890/episode-161-esat-handicape-es-a-exploiter-and-aigre-doux" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">ESAT, handicapés à exploiter - Minuit décousu, Radio Canut</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.radiofrance.fr/franceinter/podcasts/l-interview/l-interview-de-secrets-d-info-du-samedi-09-septembre-2023-7395882" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Maltraitances sur personnes handicapées : l’affaire de l’IME de Moussaron | France Inter</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://open.spotify.com/episode/6QdvXzoyhMNSlogIhHbxmF" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Santé Mentale et Open Dialogue - Pâtes au Beurre | Podcast on Spotify</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://mediateur.radiofrance.com/chaines/france-inter/une-schizophrene-ne-peut-pas-ecrire-ces-lettres-merveilleuses-dans-le-masque-et-la-plume-sur-france-inter/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">"Une schizophrène ne peut pas écrire ces lettres merveilleuses" dans le…</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.radiofrance.fr/franceculture/podcasts/france-culture-va-plus-loin-le-samedi/adele-yon-enquete-sur-une-femme-empechee-8348355" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Adèle Yon, enquête sur une femme empêchée | France Culture</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://audioblog.arteradio.com/blog/139527/podcast/244612/episode-208-desinstitutionnalisation-20-ans-apres" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Épisode 208 Désinstitutionnalisation, 20 ans après</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.radiofrance.fr/franceinter/podcasts/autant-en-emporte-l-histoire/albert-et-eduard-einstein-de-l-asile-a-l-exil-episode-1-1820060" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Albert et Eduard Einstein, de l’asile à l’exil. Episode 1 | France Inter</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://audioblog.arteradio.com/blog/139527/podcast/239997/episode-199-vies-handies" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Épisode 199 Vies handies</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.arteradio.com/son/malheur_niveau_2" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Malheur niveau 2</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.radiofrance.fr/franceculture/podcasts/serie-handicap-la-hierarchie-des-vies" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Handicap : la hiérarchie des vies : un podcast à écouter en ligne | France Culture</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://audioblog.arteradio.com/blog/139527/podcast/238087/episode-195-plutot-mort-es-que-vivant-es-and-le-livre-des-choses-perdues" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Épisode 195 Plutôt mort·es que vivant·es ? & Le livre des choses perdues</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://audioblog.arteradio.com/blog/98875/podcast/226826/196-barge-le-son-chapitre-1-partie-1" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">196 Barge le son : chapitre 1, partie 1</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://open.spotify.com/episode/3hEOjiGCx1tUVzVbhSKi5w?si=pCQX1RlaTF2Mqnkq0jI5HQ&nd=1&dlsi=8284f10b2179473b" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">5. Lydie Raër : Lutter contre le validisme - Hop Hop HOPE | Podcast on Spotify</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.radiorageuses.net/spip.php?article1667" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Luttes handies/anti-validistes - RADIORAGEUSES</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.radiofrance.fr/franceculture/podcasts/serie-attention-handicapee-mechante-une-femme-par-dela-le-handicap" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Attention ! Handicapée méchante. Une femme par-delà le handicap : un podcast à écouter…</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.radiofrance.fr/franceinter/podcasts/l-interview/l-interview-de-secrets-d-info-du-samedi-26-fevrier-2022-6972446" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Enquête au cœur des ESAT : quand le handicap est “à vendre” | France Inter</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://divergence-fm.org/podcasts/enquete-sur-les-mdph/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Enquête sur les MDPH - Divergence FM</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://divergence-fm.org/podcasts/les-petites-cuilleres/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Les petites cuillères - Divergence FM</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://divergence-fm.org/podcasts/sois-mere-et-tais-toi/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Sois mère et tais-toi - Divergence FM</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://divergence-fm.org/podcasts/validisme-electoral/" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Validisme électoral - Divergence FM</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://www.radiofrance.fr/franceculture/podcasts/questions-du-soir-le-debat/psychiatrie-faut-il-refonder-la-relation-entre-soignes-et-soignants-5725330" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Psychiatrie : faut-il refonder la relation entre soignés et soignants ? | France Culture</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+                <a href="https://open.spotify.com/show/4CFhbwqPmjwLXY0lsGh2A1" target="_blank" rel="noopener" class="resource-card">
+                    <div class="resource-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3 class="resource-title">Les Maux Bleus, dire les troubles de santé mentale | Podcast on Spotify</h3>
+                        <p class="resource-description"></p>
+                    </div>
+                    <i class="fas fa-external-link-alt resource-external"></i>
+                </a>
+
+            </div>
+
+            <!-- Message si aucun résultat -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>Aucun résultat trouvé</h3>
+                <p>Essayez avec d'autres mots-clés</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4><i class="fas fa-brain"></i> Schizothèque</h4>
+                        <p>Hub communautaire de ressources sur la schizophrénie</p>
+                        <p class="credits">
+                            Basé sur <a href="https://www.pearltrees.com/chabelitza/panorama-schizo/id86766449" target="_blank">Panorama Schizo</a>
+                        </p>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4><i class="fas fa-phone-alt"></i> Urgences</h4>
+                        <ul class="urgence-list">
+                            <li><strong>3114</strong> - Numéro national de prévention du suicide</li>
+                            <li><strong>15</strong> - SAMU</li>
+                            <li><strong>112</strong> - Urgences européennes</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4><i class="fas fa-hands-helping"></i> Contribuer</h4>
+                        <p>Ce projet est open source et communautaire.</p>
+                        <a href="https://anna-mamelli.github.com/schizotheque" class="btn-contribute" target="_blank">
+                            <i class="fab fa-github"></i> Contribuer sur GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>
+                        &copy; 2026 Schizothèque • 
+                        <a href="https://anna-mamelli.github.com/schizotheque" target="_blank">Open Source</a> • 
+                        Fait avec <i class="fas fa-heart"></i> pour la communauté
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Bouton retour en haut -->
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
