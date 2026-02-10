@@ -4,201 +4,179 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Chats et schizophrénie">
-    <title>Chats et schizophrénie | Etudes - Recherches | Schizothèque</title>
+    <title>Chats et schizophrénie | Études & Recherches | Schizothèque</title>
 
-    <link rel="icon" href="../data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+    <link rel="icon" href="../data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐱</text></svg>">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body class="has-floating-nav">
 
-    <!-- Navigation flottante -->
-    <nav class="floating-nav" id="floatingNav">
-        <div class="nav-header">
-            <a href="../index.html" class="nav-logo">
-                <i class="fas fa-brain"></i>
-                <span>Schizothèque</span>
-            </a>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-                <i class="fas fa-bars"></i>
+<!-- Navigation flottante -->
+<nav class="floating-nav" id="floatingNav">
+    <div class="nav-header">
+        <a href="../index.html" class="nav-logo">
+            <i class="fas fa-brain"></i>
+            <span>Schizothèque</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+
+    <div class="nav-menu" id="navMenu">
+        <a href="../index.html" class="nav-item"><i class="fas fa-home"></i><span>Accueil</span></a>
+        <a href="../mdph-aah/index.html" class="nav-item"><i class="fas fa-file-contract"></i><span>MDPH - AAH</span></a>
+        <a href="../culture/index.html" class="nav-item"><i class="fas fa-palette"></i><span>Culture</span></a>
+        <a href="../associations/index.html" class="nav-item"><i class="fas fa-users"></i><span>Associations</span></a>
+        <a href="../temoignages/index.html" class="nav-item"><i class="fas fa-heart"></i><span>Témoignages</span></a>
+        <a href="../luttes-handies/index.html" class="nav-item"><i class="fas fa-fist-raised"></i><span>Luttes handies</span></a>
+        <a href="../maladies/index.html" class="nav-item"><i class="fas fa-notes-medical"></i><span>Maladies & Symptômes</span></a>
+        <a href="../pair-aidance/index.html" class="nav-item"><i class="fas fa-hands-helping"></i><span>Pair-aidance</span></a>
+        <a href="../etudes-recherches/index.html" class="nav-item active"><i class="fas fa-flask"></i><span>Études & Recherches</span></a>
+        <a href="../mad-studies/index.html" class="nav-item"><i class="fas fa-book-open"></i><span>Mad Studies</span></a>
+        <a href="./index.html" class="nav-item"><i class="fas fa-hospital"></i><span>Psychiatrie</span></a>
+    </div>
+
+    <div class="nav-footer">
+        <button id="darkModeToggle" class="dark-mode-btn" aria-label="Mode sombre">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+</nav>
+
+<main class="main-wrapper">
+
+<!-- Header -->
+<header class="category-hero" style="background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);">
+    <div class="container">
+        <a href="./index.html" class="breadcrumb">
+            <i class="fas fa-arrow-left"></i> Retour à Études & Recherches
+        </a>
+
+        <div class="category-hero-content">
+            <div class="category-hero-icon">
+                <i class="fas fa-cat"></i>
+            </div>
+            <div>
+                <h1 class="category-hero-title">Chats et schizophrénie</h1>
+                <p class="category-hero-desc"></p>
+                <span class="category-hero-count">
+                    <i class="fas fa-paw"></i> 2 ressources
+                </span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Recherche -->
+<section class="search-section">
+    <div class="container">
+        <div class="search-box">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" class="search-input" id="localSearch" placeholder="Rechercher dans cette catégorie...">
+            <button class="clear-search" id="clearSearch" style="display:none;">
+                <i class="fas fa-times"></i>
             </button>
         </div>
+        <p class="results-info" id="resultsInfo"></p>
+    </div>
+</section>
 
-        <div class="nav-menu" id="navMenu">
-            <a href="../index.html" class="nav-item">
-                <i class="fas fa-home"></i>
-                <span>Accueil</span>
-            </a>
-            <a href="../mdph-aah/index.html" class="nav-item">
-                <i class="fas fa-file-contract"></i>
-                <span>MDPH - AAH</span>
-            </a>
-            <a href="../culture/index.html" class="nav-item">
-                <i class="fas fa-palette"></i>
-                <span>Culture</span>
-            </a>
-            <a href="../associations/index.html" class="nav-item">
-                <i class="fas fa-users"></i>
-                <span>Associations</span>
-            </a>
-            <a href="../temoignages/index.html" class="nav-item">
-                <i class="fas fa-heart"></i>
-                <span>Témoignages</span>
-            </a>
-            <a href="../luttes-handies/index.html" class="nav-item">
-                <i class="fas fa-fist-raised"></i>
-                <span>Luttes handies</span>
-            </a>
-            <a href="../maladies/index.html" class="nav-item">
-                <i class="fas fa-notes-medical"></i>
-                <span>Maladies & Symptômes</span>
-            </a>
-            <a href="../pair-aidance/index.html" class="nav-item">
-                <i class="fas fa-hands-helping"></i>
-                <span>Pair-aidance</span>
-            </a>
-            <a href="../etudes-recherches/index.html" class="nav-item active">
+<!-- Ressources -->
+<section class="resources-section container">
+    <div class="resources-grid" id="resourcesList">
+
+        <!-- Étude scientifique -->
+        <a href="https://pubmed.ncbi.nlm.nih.gov/38041862/"
+           target="_blank" rel="noopener"
+           class="resource-card">
+            <div class="resource-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
                 <i class="fas fa-flask"></i>
-                <span>Études & Recherches</span>
-            </a>
-            <a href="../mad-studies/index.html" class="nav-item">
-                <i class="fas fa-book-open"></i>
-                <span>Mad Studies</span>
-            </a>
-            <a href="./index.html" class="nav-item">
-                <i class="fas fa-hospital"></i>
-                <span>Psychiatrie</span>
-            </a>
+            </div>
+            <div class="resource-content">
+                <h3 class="resource-title">
+                    Cat Ownership and Schizophrenia-Related Disorders and Psychotic-Like Experiences
+                </h3>
+                <p class="resource-description"></p>
+            </div>
+            <i class="fas fa-external-link-alt resource-external"></i>
+        </a>
+
+        <!-- Article média -->
+        <a href="https://www.sciencealert.com/owning-a-cat-could-double-your-schizophrenia-risk-research-suggests"
+           target="_blank" rel="noopener"
+           class="resource-card">
+            <div class="resource-icon" style="background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%);">
+                <i class="fas fa-newspaper"></i>
+            </div>
+            <div class="resource-content">
+                <h3 class="resource-title">
+                    Owning a Cat Could Double Your Schizophrenia Risk, Research Suggests
+                </h3>
+                <p class="resource-description"></p>
+            </div>
+            <i class="fas fa-external-link-alt resource-external"></i>
+        </a>
+
+    </div>
+
+    <div class="no-results" id="noResults" style="display:none;">
+        <i class="fas fa-search"></i>
+        <h3>Aucun résultat trouvé</h3>
+        <p>Essayez avec d'autres mots-clés</p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+
+            <div class="footer-col">
+                <h4><i class="fas fa-brain"></i> Schizothèque</h4>
+                <p>Hub communautaire de ressources sur la schizophrénie</p>
+                <p class="credits">
+                    Basé sur <a href="https://www.pearltrees.com/chabelitza/panorama-schizo/id86766449" target="_blank">Panorama Schizo</a>
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4><i class="fas fa-phone-alt"></i> Urgences</h4>
+                <ul class="urgence-list">
+                    <li><strong>3114</strong> – Prévention du suicide</li>
+                    <li><strong>15</strong> – SAMU</li>
+                    <li><strong>112</strong> – Urgences européennes</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4><i class="fas fa-hands-helping"></i> Contribuer</h4>
+                <p>Ce projet est open source et communautaire.</p>
+                <a href="https://anna-mamelli.github.com/schizotheque" class="btn-contribute" target="_blank">
+                    <i class="fab fa-github"></i> Contribuer sur GitHub
+                </a>
+            </div>
+
         </div>
 
-        <div class="nav-footer">
-            <button id="darkModeToggle" class="dark-mode-btn" aria-label="Mode sombre">
-                <i class="fas fa-moon"></i>
-            </button>
+        <div class="footer-bottom">
+            <p>
+                &copy; 2026 Schizothèque •
+                <a href="https://anna-mamelli.github.com/schizotheque" target="_blank">Open Source</a> •
+                Fait avec <i class="fas fa-heart"></i> pour la communauté
+            </p>
         </div>
-    </nav>
+    </div>
+</footer>
 
-    <!-- Contenu principal -->
-    <main class="main-wrapper">
+</main>
 
-        <!-- Header de sous-catégorie -->
-        <header class="category-hero" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-            <div class="container">
-                <a href="./index.html" class="breadcrumb">
-                    <i class="fas fa-arrow-left"></i> Retour à Psychiatrie
-                </a>
-                <div class="category-hero-content">
-                    <div class="category-hero-icon">
-                        <i class="fas fa-heartbeat"></i>
-                    </div>
-                    <div>
-                        <h1 class="category-hero-title">Chats et schizophrénie</h1>
-                        <p class="category-hero-desc"></p>
-                        <span class="category-hero-count"><i class="fas fa-link"></i> 2 ressources</span>
-                    </div>
-                </div>
-            </div>
-        </header>
+<button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+    <i class="fas fa-arrow-up"></i>
+</button>
 
-        <!-- Barre de recherche -->
-        <section class="search-section">
-            <div class="container">
-                <div class="search-box">
-                    <i class="fas fa-search search-icon"></i>
-                    <input type="text" class="search-input" id="localSearch" placeholder="Rechercher dans cette catégorie...">
-                    <button class="clear-search" id="clearSearch" style="display: none;">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                <p class="results-info" id="resultsInfo"></p>
-            </div>
-        </section>
-
-        <!-- Grille de ressources -->
-        <section class="resources-section container">
-            <div class="resources-grid" id="resourcesList">
-
-                <!-- Ressource 1 : Syndrome métabolique -->
-                <a href="https://pubmed.ncbi.nlm.nih.gov/38041862/" target="_blank" rel="noopener" class="resource-card">
-                    <div class="resource-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                        <i class="fas fa-notes-medical"></i>
-                    </div>
-                    <div class="resource-content">
-                        <h3 class="resource-title">Cat Ownership and Schizophrenia-Related Disorders and Psychotic-Like Experiences: A Systematic Review and Meta-Analysis</h3>
-                        <p class="resource-description"></p>
-                    </div>
-                    <i class="fas fa-external-link-alt resource-external"></i>
-                </a>
-
-                <!-- Ressource 2 : Effets secondaires antipsychotiques -->
-                <a href="https://www.sciencealert.com/owning-a-cat-could-double-your-schizophrenia-risk-research-suggests" target="_blank" rel="noopener" class="resource-card">
-                    <div class="resource-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-                        <i class="fas fa-pills"></i>
-                    </div>
-                    <div class="resource-content">
-                        <h3 class="resource-title">Owning a Cat Could Double Your Schizophrenia Risk, Research Suggests</h3>
-                        <p class="resource-description"></p>
-                    </div>
-                    <i class="fas fa-external-link-alt resource-external"></i>
-                </a>
-
-                </div>
-
-            <!-- Message si aucun résultat -->
-            <div class="no-results" id="noResults" style="display: none;">
-                <i class="fas fa-search"></i>
-                <h3>Aucun résultat trouvé</h3>
-                <p>Essayez avec d'autres mots-clés</p>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-grid">
-                    <div class="footer-col">
-                        <h4><i class="fas fa-brain"></i> Schizothèque</h4>
-                        <p>Hub communautaire de ressources sur la schizophrénie</p>
-                        <p class="credits">
-                            Basé sur <a href="https://www.pearltrees.com/chabelitza/panorama-schizo/id86766449" target="_blank">Panorama Schizo</a>
-                        </p>
-                    </div>
-
-                    <div class="footer-col">
-                        <h4><i class="fas fa-phone-alt"></i> Urgences</h4>
-                        <ul class="urgence-list">
-                            <li><strong>3114</strong> - Numéro national de prévention du suicide</li>
-                            <li><strong>15</strong> - SAMU</li>
-                            <li><strong>112</strong> - Urgences européennes</li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-col">
-                        <h4><i class="fas fa-hands-helping"></i> Contribuer</h4>
-                        <p>Ce projet est open source et communautaire.</p>
-                        <a href="https://anna-mamelli.github.com/schizotheque" class="btn-contribute" target="_blank">
-                            <i class="fab fa-github"></i> Contribuer sur GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <div class="footer-bottom">
-                    <p>
-                        &copy; 2026 Schizothèque • 
-                        <a href="https://anna-mamelli.github.com/schizotheque" target="_blank">Open Source</a> • 
-                        Fait avec <i class="fas fa-heart"></i> pour la communauté
-                    </p>
-                </div>
-            </div>
-        </footer>
-
-    </main>
-
-    <!-- Bouton retour en haut -->
-    <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <script src="../js/main.js"></script>
+<script src="../js/main.js"></script>
 </body>
 </html>
