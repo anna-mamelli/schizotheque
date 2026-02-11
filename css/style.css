@@ -293,18 +293,25 @@ body.has-floating-nav {
 }
 
 .breadcrumb {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: white;
-    opacity: 0.9;
-    margin-bottom: 1.5rem;
-    text-decoration: none;
-    transition: opacity 0.3s ease;
+    display: none !important;
+    position: relative; /* pas absolute si tu ne veux pas qu'il flotte ailleurs */
+    top: 0;
+    right: auto; /* ou left: 0 selon le placement voulu */
+    margin-bottom: 1rem;
 }
 
 .breadcrumb:hover {
     opacity: 1;
+}
+
+.category-hero .breadcrumb {
+    position: static !important; /* Annule tout absolute/fixed */
+    float: none !important;      /* Annule tout float */
+    display: inline-block;        /* Affiche normalement */
+    margin-bottom: 1rem;         /* Espace sous le lien */
+}
+.category-hero .external-link-icon {
+    display: none !important;
 }
 
 .category-hero-content {
@@ -312,6 +319,17 @@ body.has-floating-nav {
     align-items: center;
     gap: 2rem;
 }
+.category-hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Toujours à gauche */
+}
+.category-hero .category-hero-content {
+    display: flex;
+    flex-direction: row; /* ou column si tu veux empiler icône + texte */
+    align-items: center; /* Aligne verticalement icône + texte */
+}
+
 
 .category-hero-icon {
     width: 80px;
@@ -801,6 +819,21 @@ body.has-floating-nav {
 .back-to-top:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+
+/* Supprime le petit lien en haut à droite dans le header des pages de catégorie */
+.category-hero .resource-external,
+.category-hero .external-link-icon {
+    display: none !important;
+}
+
+a[href^="http"]:has(svg) {
+    display: none !important;
+}
+
+.external-link { 
+    display: none !important; 
 }
 
 /* ===================================

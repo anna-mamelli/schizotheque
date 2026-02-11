@@ -45,7 +45,6 @@ const resourcesData = {
             }
         ]
     },
-    
     'culture': {
         title: 'Culture',
         icon: 'fa-palette',
@@ -81,7 +80,6 @@ const resourcesData = {
             }
         ]
     },
-    
     'associations': {
         title: 'Associations',
         icon: 'fa-users',
@@ -120,34 +118,27 @@ const resourcesData = {
 };
 
 // ===================================
-// GESTION DU MODE SOMBRE
+// MODE SOMBRE
 // ===================================
 
 const darkModeToggle = document.getElementById('darkModeToggle');
-const body = document.body;
+const html = document.documentElement;
 
 // Charger la préférence sauvegardée
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'dark') {
-    body.classList.add('dark-mode');
-    updateDarkModeIcon(true);
-}
+const currentTheme = localStorage.getItem('theme') || 'light';
+html.setAttribute('data-theme', currentTheme);
 
 // Toggle mode sombre
 if (darkModeToggle) {
     darkModeToggle.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-        const isDark = body.classList.contains('dark-mode');
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        updateDarkModeIcon(isDark);
-    });
-}
+        const newTheme = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
 
-function updateDarkModeIcon(isDark) {
-    if (darkModeToggle) {
-        const icon = darkModeToggle.querySelector('i');
-        icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
-    }
+        // Animation du bouton
+        darkModeToggle.style.transform = 'rotate(360deg)';
+        setTimeout(() => darkModeToggle.style.transform = 'rotate(0deg)', 300);
+    });
 }
 
 // ===================================
@@ -158,57 +149,50 @@ const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');
 const floatingNav = document.getElementById('floatingNav');
 
-// Toggle menu mobile
 if (navToggle && navMenu) {
     navToggle.addEventListener('click', () => {
         navMenu.classList.toggle('active');
         const icon = navToggle.querySelector('i');
-        icon.classList.toggle('fa-bars');
-        icon.classList.toggle('fa-times');
+        if (icon) {
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        }
     });
 
-    // Fermer le menu au clic sur un lien
     const navLinks = navMenu.querySelectorAll('.nav-item');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             navMenu.classList.remove('active');
-            navToggle.querySelector('i').classList.add('fa-bars');
-            navToggle.querySelector('i').classList.remove('fa-times');
+            const icon = navToggle.querySelector('i');
+            if (icon) {
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            }
         });
     });
 }
 
-// Navigation sticky au scroll
+// Sticky nav au scroll
 let lastScroll = 0;
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    
+
     if (floatingNav) {
         if (currentScroll > 100) {
             floatingNav.classList.add('scrolled');
-            
-            // Masquer/afficher selon la direction du scroll
-            if (currentScroll > lastScroll && currentScroll > 300) {
-                floatingNav.style.transform = 'translateY(-100%)';
-            } else {
-                floatingNav.style.transform = 'translateY(0)';
-            }
+            floatingNav.style.transform = (currentScroll > lastScroll && currentScroll > 300) ? 'translateY(-100%)' : 'translateY(0)';
         } else {
             floatingNav.classList.remove('scrolled');
             floatingNav.style.transform = 'translateY(0)';
         }
     }
-    
+
     lastScroll = currentScroll;
-    
+
     // Bouton retour en haut
     const backToTop = document.getElementById('backToTop');
     if (backToTop) {
-        if (currentScroll > 400) {
-            backToTop.classList.add('visible');
-        } else {
-            backToTop.classList.remove('visible');
-        }
+        backToTop.classList.toggle('visible', currentScroll > 400);
     }
 });
 
@@ -219,15 +203,12 @@ window.addEventListener('scroll', () => {
 const backToTop = document.getElementById('backToTop');
 if (backToTop) {
     backToTop.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 }
 
 // ===================================
-// RECHERCHE GLOBALE (PAGE D'ACCUEIL)
+// RECHERCHE GLOBALE
 // ===================================
 
 const globalSearch = document.getElementById('globalSearch');
@@ -237,34 +218,24 @@ const clearGlobalSearch = document.getElementById('clearGlobalSearch');
 if (globalSearch && searchResults) {
     globalSearch.addEventListener('input', (e) => {
         const query = e.target.value.toLowerCase().trim();
-        
-        // Afficher/masquer le bouton clear
-        if (clearGlobalSearch) {
-            clearGlobalSearch.style.display = query ? 'block' : 'none';
-        }
-        
+
+        if (clearGlobalSearch) clearGlobalSearch.style.display = query ? 'block' : 'none';
         if (query.length < 2) {
             searchResults.innerHTML = '';
             searchResults.style.display = 'none';
             return;
         }
-        
-        // Recherche dans toutes les catégories
+
         const results = [];
         Object.entries(resourcesData).forEach(([category, data]) => {
             data.resources.forEach(resource => {
                 const searchText = `${resource.title} ${resource.description} ${resource.tags.join(' ')}`.toLowerCase();
                 if (searchText.includes(query)) {
-                    results.push({
-                        ...resource,
-                        category: data.title,
-                        categoryUrl: `${category}.html`
-                    });
+                    results.push({ ...resource, category: data.title, categoryUrl: `${category}.html` });
                 }
             });
         });
-        
-        // Afficher les résultats
+
         if (results.length > 0) {
             searchResults.innerHTML = `
                 <div class="search-results-header">
@@ -295,15 +266,13 @@ if (globalSearch && searchResults) {
             searchResults.style.display = 'block';
         }
     });
-    
-    // Fermer les résultats en cliquant ailleurs
+
     document.addEventListener('click', (e) => {
         if (!globalSearch.contains(e.target) && !searchResults.contains(e.target)) {
             searchResults.style.display = 'none';
         }
     });
-    
-    // Clear search
+
     if (clearGlobalSearch) {
         clearGlobalSearch.addEventListener('click', () => {
             globalSearch.value = '';
@@ -316,7 +285,7 @@ if (globalSearch && searchResults) {
 }
 
 // ===================================
-// RECHERCHE LOCALE (PAGES DE CATÉGORIE)
+// RECHERCHE LOCALE
 // ===================================
 
 const localSearch = document.getElementById('localSearch');
@@ -326,33 +295,26 @@ const resultsInfo = document.getElementById('resultsInfo');
 
 if (localSearch && resourcesList) {
     const allResources = Array.from(resourcesList.querySelectorAll('.resource-item'));
-    
+
     localSearch.addEventListener('input', (e) => {
         const query = e.target.value.toLowerCase().trim();
-        
-        // Afficher/masquer le bouton clear
-        if (clearSearch) {
-            clearSearch.style.display = query ? 'block' : 'none';
-        }
-        
+        if (clearSearch) clearSearch.style.display = query ? 'block' : 'none';
+
         let visibleCount = 0;
-        
+
         allResources.forEach(item => {
             const title = item.querySelector('.resource-title')?.textContent.toLowerCase() || '';
             const description = item.querySelector('.resource-description')?.textContent.toLowerCase() || '';
             const tags = Array.from(item.querySelectorAll('.resource-tag')).map(tag => tag.textContent.toLowerCase()).join(' ');
-            
             const searchText = `${title} ${description} ${tags}`;
-            
+
             if (searchText.includes(query)) {
                 item.style.display = '';
                 visibleCount++;
-                
-                // Highlight des termes recherchés
+
                 if (query.length >= 2) {
                     const titleEl = item.querySelector('.resource-title');
                     const descEl = item.querySelector('.resource-description');
-                    
                     if (titleEl) titleEl.innerHTML = highlightText(titleEl.textContent, query);
                     if (descEl) descEl.innerHTML = highlightText(descEl.textContent, query);
                 }
@@ -360,8 +322,7 @@ if (localSearch && resourcesList) {
                 item.style.display = 'none';
             }
         });
-        
-        // Afficher le nombre de résultats
+
         if (resultsInfo) {
             if (query) {
                 resultsInfo.textContent = `${visibleCount} résultat${visibleCount > 1 ? 's' : ''} trouvé${visibleCount > 1 ? 's' : ''}`;
@@ -370,8 +331,7 @@ if (localSearch && resourcesList) {
                 resultsInfo.style.display = 'none';
             }
         }
-        
-        // Message si aucun résultat
+
         const noResults = resourcesList.querySelector('.no-results-message');
         if (visibleCount === 0 && query) {
             if (!noResults) {
@@ -388,39 +348,32 @@ if (localSearch && resourcesList) {
             noResults.remove();
         }
     });
-    
-    // Clear local search
+
     if (clearSearch) {
         clearSearch.addEventListener('click', () => {
             localSearch.value = '';
             allResources.forEach(item => {
                 item.style.display = '';
-                
-                // Retirer les highlights
                 const titleEl = item.querySelector('.resource-title');
                 const descEl = item.querySelector('.resource-description');
                 if (titleEl) titleEl.textContent = titleEl.textContent;
                 if (descEl) descEl.textContent = descEl.textContent;
             });
-            
             clearSearch.style.display = 'none';
             if (resultsInfo) resultsInfo.style.display = 'none';
-            
             const noResults = resourcesList.querySelector('.no-results-message');
             if (noResults) noResults.remove();
-            
             localSearch.focus();
         });
     }
 }
 
 // ===================================
-// FONCTION DE HIGHLIGHT
+// FONCTIONS UTILES
 // ===================================
 
 function highlightText(text, query) {
     if (!query || query.length < 2) return text;
-    
     const regex = new RegExp(`(${escapeRegex(query)})`, 'gi');
     return text.replace(regex, '<mark>$1</mark>');
 }
@@ -436,21 +389,12 @@ function escapeRegex(string) {
 function updateStats() {
     const totalCategories = Object.keys(resourcesData).length;
     let totalResources = 0;
-    
-    Object.values(resourcesData).forEach(category => {
-        totalResources += category.resources.length;
-    });
-    
+    Object.values(resourcesData).forEach(cat => totalResources += cat.resources.length);
+
     const categoriesCount = document.getElementById('categoriesCount');
     const resourcesCount = document.getElementById('resourcesCount');
-    
-    if (categoriesCount) {
-        animateCounter(categoriesCount, totalCategories);
-    }
-    
-    if (resourcesCount) {
-        animateCounter(resourcesCount, totalResources);
-    }
+    if (categoriesCount) animateCounter(categoriesCount, totalCategories);
+    if (resourcesCount) animateCounter(resourcesCount, totalResources);
 }
 
 function animateCounter(element, target) {
@@ -471,12 +415,8 @@ function animateCounter(element, target) {
 // ANIMATIONS AU SCROLL
 // ===================================
 
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
+const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('fade-in');
@@ -485,19 +425,14 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observer les cartes de catégories
-document.querySelectorAll('.category-card, .resource-item').forEach(card => {
-    observer.observe(card);
-});
+document.querySelectorAll('.category-card, .resource-item').forEach(card => observer.observe(card));
 
 // ===================================
 // COPIER LE LIEN
 // ===================================
 
 function copyToClipboard(text) {
-    navigator.clipboard.writeText(text).then(() => {
-        showNotification('Lien copié dans le presse-papier !');
-    });
+    navigator.clipboard.writeText(text).then(() => showNotification('Lien copié dans le presse-papier !'));
 }
 
 function showNotification(message) {
@@ -505,15 +440,9 @@ function showNotification(message) {
     notification.className = 'notification';
     notification.textContent = message;
     document.body.appendChild(notification);
-    
-    setTimeout(() => {
-        notification.classList.add('show');
-    }, 100);
-    
-    setTimeout(() => {
-        notification.classList.remove('show');
-        setTimeout(() => notification.remove(), 300);
-    }, 3000);
+
+    setTimeout(() => notification.classList.add('show'), 100);
+    setTimeout(() => { notification.classList.remove('show'); setTimeout(() => notification.remove(), 300); }, 3000);
 }
 
 // ===================================
@@ -521,16 +450,8 @@ function showNotification(message) {
 // ===================================
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Mettre à jour les statistiques si on est sur la page d'accueil
-    if (document.getElementById('categoriesCount')) {
-        updateStats();
-    }
-    
-    // Ajouter la classe loaded pour les animations
-    setTimeout(() => {
-        document.body.classList.add('loaded');
-    }, 100);
-    
+    if (document.getElementById('categoriesCount')) updateStats();
+    setTimeout(() => document.body.classList.add('loaded'), 100);
     console.log('🧠 Schizothèque chargée avec succès !');
 });
 
@@ -538,9 +459,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // GESTION DES ERREURS
 // ===================================
 
-window.addEventListener('error', (e) => {
-    console.error('Erreur détectée:', e.error);
-});
+window.addEventListener('error', e => console.error('Erreur détectée:', e.error));
 
 // ===================================
 // SERVICE WORKER (OPTIONNEL - PWA)
@@ -548,63 +467,60 @@ window.addEventListener('error', (e) => {
 
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-        // Décommenter pour activer le mode PWA
         // navigator.serviceWorker.register('/sw.js')
         //     .then(reg => console.log('Service Worker enregistré'))
         //     .catch(err => console.log('Erreur Service Worker:', err));
     });
 }
-// ===================================
-// MODE SOMBRE
-// ===================================
+// Recherche locale sur les pages de catégorie
+document.addEventListener("DOMContentLoaded", function() {
+    const searchInput = document.getElementById("localSearch");
+    const resourcesList = document.getElementById("resourcesList");
+    const resourceCards = Array.from(resourcesList.getElementsByClassName("resource-card"));
+    const noResults = document.getElementById("noResults");
+    const clearBtn = document.getElementById("clearSearch");
+    const resultsInfo = document.getElementById("resultsInfo");
 
-const darkModeToggle = document.getElementById('darkModeToggle');
-const html = document.documentElement;
+    function filterResources() {
+        const query = searchInput.value.toLowerCase().trim();
+        let visibleCount = 0;
 
-// Charger la préférence sauvegardée
-const currentTheme = localStorage.getItem('theme') || 'light';
-html.setAttribute('data-theme', currentTheme);
-
-// Toggle du mode sombre
-if (darkModeToggle) {
-    darkModeToggle.addEventListener('click', () => {
-        const currentTheme = html.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
-        html.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        
-        // Animation du bouton
-        darkModeToggle.style.transform = 'rotate(360deg)';
-        setTimeout(() => {
-            darkModeToggle.style.transform = 'rotate(0deg)';
-        }, 300);
-    });
-const navToggle = document.getElementById('navToggle');
-const navMenu = document.getElementById('navMenu');
-
-if (navToggle && navMenu) {
-    navToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-
-        const icon = navToggle.querySelector('i');
-        if (icon) {
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-times');
-        }
-    });
-
-    // Fermer le menu quand on clique sur un lien
-    const navLinks = navMenu.querySelectorAll('.nav-item');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            const icon = navToggle.querySelector('i');
-            if (icon) {
-                icon.classList.add('fa-bars');
-                icon.classList.remove('fa-times');
+        resourceCards.forEach(card => {
+            const title = card.querySelector(".resource-title").textContent.toLowerCase();
+            const desc = card.querySelector(".resource-description").textContent.toLowerCase();
+            if (title.includes(query) || desc.includes(query)) {
+                card.style.display = "flex";
+                visibleCount++;
+            } else {
+                card.style.display = "none";
             }
         });
-    });
-}
 
+        // Message aucun résultat
+        noResults.style.display = visibleCount === 0 ? "block" : "none";
+
+        // Affichage info résultats
+        if(query) {
+            resultsInfo.textContent = `${visibleCount} résultat(s) pour "${searchInput.value}"`;
+            clearBtn.style.display = "inline-block";
+        } else {
+            resultsInfo.textContent = "";
+            clearBtn.style.display = "none";
+            resourceCards.forEach(card => card.style.display = "flex");
+        }
+    }
+
+    // Événement sur la saisie
+    searchInput.addEventListener("input", filterResources);
+
+    // Bouton clear
+    clearBtn.addEventListener("click", () => {
+        searchInput.value = "";
+        filterResources();
+        searchInput.focus();
+    });
+});
+document.addEventListener("DOMContentLoaded", function() {
+    const link = document.querySelector("a[href^='http'] svg")?.parentElement;
+    if (link) link.remove();
+});
