@@ -10,8 +10,6 @@
 
 La **Schizothèque** est un site web communautaire qui centralise des ressources, informations et témoignages sur la schizophrénie.
 
-Basé sur le travail collaboratif de [Panorama Schizo](https://www.pearltrees.com/chabelitza/panorama-schizo/id86766449) par Chabelitza.
-
 ---
 
 
@@ -78,10 +76,3 @@ Idées de contributions
     📱 Améliorer la version mobile
     ♿ Renforcer l'accessibilité
     🌍 Ajouter des traductions
-
----
-
-🙏 Remerciements
-
-    Chabelitza - Pour le Panorama Schizo original
-    Contributeurs - Merci à tous ceux qui enrichissent ce projet
